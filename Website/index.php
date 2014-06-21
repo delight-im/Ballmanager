@@ -74,7 +74,8 @@ if ($cookie_team != '__'.$cookie_id) {
 	?>
 	<?php if (isMobile() && isset($nextGamesHTML)) { echo str_replace(' (<a href="/wio.php">WIO</a>)', '', $nextGamesHTML); } ?>
 	<h1>Dein Verein: <?php echo $cookie_teamname; ?></h1>
-	<p style="text-align:left; margin-bottom:0;"><a class="pagenava" href="/freundeWerben.php">Freunde einladen</a></p>
+	<p><img style="vertical-align: middle;" src="/images/bonus.png" alt="Donate" width="16"> Have you considered supporting the game with a donation this month? Check out the <a href="#">Donation Offer</a> screen to see what rewards you can get by supporting the game.</p>
+        <p><img style="vertical-align: middle;" src="/images/invite.png" alt="Freunde" width="16"> Invite your friends to play. Help attract new players to the game and get a 7,5 million reward in-game money for each referral that you make!<br><a class="pagenava" href="/freundeWerben.php">Freunde einladen</a></p>
 	<table>
 	<thead>
 	<tr class="odd">

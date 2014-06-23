@@ -11,7 +11,43 @@ function email_senden($email, $username, $password, $activeIP='0.0.0.0') {
     global $config;
 	$empfaenger = $email;
 	$betreff = 'Ballmanager: Willkommen';
-	$nachricht = "Hallo ".$username.",\n\nDu hast Dich erfolgreich auf www.ballmanager.de registriert. Bitte logge Dich jetzt mit Deinen Benutzerdaten ein, um Deinen Account zu aktivieren. Und dann kann es auch schon losgehen ...\n\nDamit Du Dich anmelden kannst, findest Du hier noch einmal Deine Benutzerdaten:\n\nE-Mail: ".$email."\nBenutzername: ".$username."\nPasswort: ".$password."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\nDas Ballmanager Support-Team\nwww.ballmanager.de\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de";
+	$nachricht = '
+        <div>
+	    <table width="100%" border="0" bgcolor="#f1f1f1" cellspacing="0" cellpadding="0">
+	        <tbody>
+                    <br>
+		    <tr>
+		        <td valign="top"><img width="1" height="1" src=""></td>
+			<td valign="middle" align="center"><a target="_blank" href="http://www.ballmanager.de"><img width="260" style="border: 0px none; width: 260px; height: 60px;" title="Ballmanager - Online-Fußball-Manager" alt="Ballmanager - Online-Fußball-Manager" src="http://www.ballmanager.de/images/logo_black.png"></a></td>
+			<td valign="top"><img width="1" height="1" src=""></td>
+		    </tr>
+                    <tr>
+		        <td><img width="1" height="1" src=""></td>
+                        <td width="800" bgcolor="#ffffff" style="border-top:10px solid #3f6d98;line-height:1.5">
+			    <table width="100%" cellpadding="20">
+			        <tbody>
+                                    <tr>
+				        <td align="center">
+					    <table width="100%" cellpadding="5">
+						<tbody>
+                                                    <tr>
+						        <td style="font-family: \'Helvetica Neue\',helvetica,sans-serif; color: rgb(68, 68, 68); font-size: 16px; line-height: 1.5;">
+							    <h1 style="font-family:\'Helvetica Neue\',helvetica,sans-serif;color:#3f6d98!important;font-weight:300!important"><center>Please confirm your data</center></h1>Hallo '.$username.',<br><br> Du hast Dich erfolgreich auf www.ballmanager.de registriert. Bitte logge Dich jetzt mit Deinen Benutzerdaten ein, um Deinen Account zu aktivieren. Und dann kann es auch schon losgehen ...<br><br>  Damit Du Dich anmelden kannst, findest Du hier noch einmal Deine Benutzerdaten:<br><br>  E-Mail: '.$email.'<br>Benutzername: '.$username.'<br> Passwort: '.$password.'<br><br>  Wir wünschen Dir noch viel Spaß beim Managen!<br>  Sportliche Grüße<br> Das Ballmanager Support-Team<br> www.ballmanager.de<br>
+                                                            <br><br><center><a href="http://www.ballmanager.de" style="color:#ffffff;font-family:\'Helvetica Neue\',helvetica,sans-serif;text-decoration:none;font-size:14px;background:#3f6d98;line-height:32px;padding:0 10px;display:inline-block;border-radius:3px" target="_blank">Activate your account</a></center><br>---------------------------------------------------------------------<br><div style="font-size:10px;">Du erhältst diese E-Mail, weil Du Dich auf www.ballmanager.de mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter info@ballmanager.de</div>
+							    <br>
+							</td>
+						    </tr>
+						</tbody>
+                                            </table>
+					</td>
+				    </tr>
+				</tbody>
+                            </table>
+			</td>
+		    </tr>
+		</tbody>
+            </table>
+        </div>';
 	if ($config['PHP_MAILER']) {
 		require './phpmailer/PHPMailerAutoload.php';
 		$mail = new PHPMailer(); // create a new object
@@ -30,7 +66,7 @@ function email_senden($email, $username, $password, $activeIP='0.0.0.0') {
 		$mail->Send();
 	}
 	else{
-		$header = "From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/plain; charset=utf-8";
+		$header = "From: Ballmanager <info@ballmanager.de>\r\nContent-type: text/html; charset=utf-8";
 		mail($empfaenger, $betreff, $nachricht, $header);
 	}
 }

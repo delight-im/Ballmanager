@@ -25,7 +25,7 @@ else { // if the event log for another user's club is to be shown by the support
 
 setTaskDone('check_logs');
 
-$filterTypes = array('Spieler', 'Finanzen', 'Termine', 'Transfers', 'Verletzung', 'Stadion', 'Assistenten');
+$filterTypes = array('Spieler', 'Finanzen', 'Termine', 'Transfers', 'Verletzung', 'Stadion', 'Assistenten', 'Administration');
 $filterSQL = "";
 $filterGET = '';
 if (isset($_GET['filter'])) {

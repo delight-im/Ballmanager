@@ -453,6 +453,15 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 		echo '<li><em>keine</em></li>';
 	}
 	echo '</ul>';
+	
+    echo '<h1>Mass game notifications</h1>'; ?>
+    <br><form accept-charset="utf-8" method="post" action="/sanktionen.php"><p><select style="width:200px" size="1" name="notification"><option value="">-- Mass Notification --</option><option value="1">Game updated message</option></select></p><p><input type="submit" onclick="return confirm('Bist Du sicher?')" value="Ausführen"></p></form>
+    <?php if ($_POST['notification']==1){
+    $formulierung = 'The game has been updated. Check out the <a href="/neuigkeiten.php">Patch Notes</a>!';
+    $sql4 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$cookie_team."', '".$formulierung."', 'Administration', '".time()."')";
+    $sql5 = mysql_query($sql4);
+    echo '<br><p>The mass notification has been sent.</p>';
+    echo addInfoBox('The mass notification has been sent.');}
     
     $invalidMatchesTimeout = time()-3600*6; // Spiel muss mindestens 6 Stunden her sein und trotzdem nicht simuliert
     $invalidMatchesWhere = "datum < ".$invalidMatchesTimeout." AND ergebnis = '-:-'";

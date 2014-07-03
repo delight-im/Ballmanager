@@ -238,6 +238,17 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 <p><b><a href="/passwort_vergessen.php">Passwort vergessen?</a></b></p>
 </form>
 </div>
+<h1>Choose Language</h1>
+<div class="left-box">
+<p>
+    <select onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);" style="width:170px">
+    <option value="" selected="selected">Select...</option>
+    <option value="http://ballmanager.de/?setLocale=de_DE">Deutsch</option>
+    <option value="http://ballmanager.de/?setLocale=en_US">English</option>
+    <option value="http://ballmanager.de/?setLocale=es_ES">Español</option>
+</select>
+</p>
+</div>
 <h1>Demo-Account</h1>
 <div class="left-box">
 <p><strong>Username:</strong> Demo<br /><strong>Passwort:</strong> demo</p>

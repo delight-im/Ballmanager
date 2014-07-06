@@ -211,6 +211,7 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 	<ul>
 		<li><a href="/support.php">Support</a></li>
 		<li><a href="/wio.php#teamList">Post ans Team</a></li>
+		<li><a href="/tutorial.php">Tutorial</a></li>
 		<li><a href="/tipps_des_tages.php">Kurztipps</a></li>
 		<li><a href="/regeln.php">Regeln</a></li>
 		<?php if ($cookie_username == 'Yazu7') { ?><li><a href="/forum.php">Archiv</a></li><?php } ?>

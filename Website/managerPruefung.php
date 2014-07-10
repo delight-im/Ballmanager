@@ -27,7 +27,7 @@ echo '<p>Der Vorstand Deines Klubs hat viel Vertrauen in Dich. Aber bevor Du Tra
 $html = '<table><thead><tr class="odd"><th scope="col">&nbsp;</th><th scope="col">Prüfung</th></tr></thead><tbody>';
 $html .= '<tr><td>'.showErfolg(1).'</td><td>[01] Registriere Dich beim Ballmanager und aktiviere Deinen Account.</td></tr>';
 $html .= '<tr class="odd"><td>'.showErfolg(1).'</td><td>[02] Wähle nach dem ersten Login Dein Team und Deine Liga.</td></tr>';
-$sql1 = "SELECT a.task, b.id AS done FROM ".$prefix."licenseTasks AS a LEFT JOIN ".$prefix."licenseTasks_Completed AS b ON a.shortName = b.task AND b.user = '".$cookie_id."'";
+$sql1 = "SELECT a.task, b.id AS done FROM ".$prefix."licenseTasks AS a LEFT JOIN ".$prefix."licenseTasks_Completed AS b ON a.shortName = b.task AND b.user = '".$cookie_id."' LIMIT 0, 30";
 $sql2 = mysql_query($sql1);
 $rowCounter = 2;
 while ($sql3 = mysql_fetch_assoc($sql2)) {

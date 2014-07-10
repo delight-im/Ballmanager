@@ -194,7 +194,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
     $id++;
 	$html .= showAchiev($sql3['done'], $sql3['task'], $id);
 }
-echo '<div style="margin-left:5px">'.$html.'<div style="border-top: 1px solid #eff0f1;"><a href="/achievement.php">Display all achievements</a></div></div>';?>
+echo '<div style="margin-left:5px">'.$html.'<div style="border-top: 1px solid #eff0f1;"><a href="/achievements.php">Display my achievements</a></div></div>';?>
 <?php
 if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 	if ($wantTests == 1) {

@@ -1,5 +1,4 @@
 <?php include 'zz1.php'; ?>
-<?php include 'zz1.php'; ?>
 <?php
 if (!isset($_GET['id'])) { exit; }
 function getTestspielPreis($liga, $team) {

@@ -181,6 +181,30 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 </tbody>
 </table>
 <?php
+// ACHIEVEMENTS START
+echo '<h1>Achievements</h1>';
+function showAchiev($erfolg = 0, $title, $name) {
+    if ($erfolg > 0) {
+        return '<img width="35" style="vertical-align: middle;" title="'.$title.'" src="images/achievements/'.$name.'.png">';
+    }
+}
+$sql1 = "SELECT a.task, b.id AS done FROM ".$prefix."licenseTasks AS a LEFT JOIN ".$prefix."licenseTasks_Completed AS b ON a.shortName = b.task AND b.user = '".$clearedID."' LIMIT 30, 18446744073709551615"; // change this depending on the max amount of achiev you have
+$sql2 = mysql_query($sql1);
+$html = ' ';
+while ($sql3 = mysql_fetch_assoc($sql2)) {
+    $sql4 = "SELECT shortName FROM ".$prefix."licenseTasks WHERE task = '".$sql3['task']."'";
+	$sql5 = mysql_query($sql4);
+	$sql6 = mysql_fetch_array($sql5); 
+$html .= showAchiev($sql3['done'], $sql3['task'], $sql6['shortName']);
+}
+echo '<div style="margin-left:5px">'.$html.'<div style="border-top: 1px solid #eff0f1;">';
+if ($clearedID == $cookie_id) {
+    echo '<a href="/managerPruefung.php?mode=achievements">Display my achievements</a>';
+}
+echo '</div></div>';
+// ACHIEVEMENTS END
+?>
+<?php
 if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 	if ($wantTests == 1) {
 		// MEHERE TESTSPIELE AM GLEICHEN TAG VERHINDERN ANFANG

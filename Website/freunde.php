@@ -25,6 +25,7 @@ $kontakt1 = "SELECT username, last_login, f2, sortOrder FROM ".$prefix."freunde 
 $kontakt2 = mysql_query($kontakt1);
 $kontakt2a = mysql_num_rows($kontakt2);
 if ($kontakt2a == 0) { $kontakt2a = 'noch keine'; }
+if ($kontakt2a > 9) { setTaskDone('im_so_popular'); }
 echo '<h1>Du hast zurzeit '.$kontakt2a.' Freunde beim Ballmanager</h1>';
 if ($kontakt2a == 'noch keine') { echo '<p>'._('Wenn Du Deine Freunde zu dieser Liste hinzufügen möchtest, dann öffne bitte das Profil des jeweiligen Managers und klicke unten auf den Link &quot;Freundschaft anbieten&quot;.').'</p>'; }
 else {

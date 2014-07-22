@@ -5,6 +5,17 @@
 <?php if ($loggedin == 1) { ?>
 <p><strong><?php echo _('Deine Freunde sind noch nicht beim Ballmanager?').'</strong><br />'._('Dann nutze den folgenden Link, um sie einzuladen.').'</p><p>'._('Wenn sie sich nach Deiner Empfehlung über den Link registrieren, bekommt <strong>ihr beide</strong> jeweils <strong>7,5 Mio.</strong> als Prämie aufs Vereinskonto:'); ?></p>
 <p style="display:block; width:360px; margin:0 auto; padding:2px 4px; background-color:#00f; color:#fff;"><a target="_blank" style="color:#fff;" href="http://www.ballmanager.de/?r=<?php echo $cookie_id; ?>">www.ballmanager.de/?r=<?php echo $cookie_id; ?></a></p>
+<p>
+                    <a target="_blank" class="facebookShareButton float_left" title="Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http://www.ballmanager.de/?r=<?php echo $cookie_id; ?>">
+                        <img alt="Facebook" style="margin: 2px; float: left;" src="/images/facebook.png">
+                    </a>
+                    <a target="_blank" class="twitterShareButton float_left" title="Twitter" href="http://www.addtoany.com/add_to/twitter?linkurl=http://www.ballmanager.de/?r=<?php echo $cookie_id; ?>">
+                        <img alt="Twitter" style="margin: 2px; float: left;" src="/images/twitter_logo.png">
+                    </a>
+                    <a target="_blank" class="googlePlusShareButton float_left" title="Google+" href="http://plus.google.com/share?url=http://www.ballmanager.de/?r=<?php echo $cookie_id; ?>">
+                        <img alt="Google+" style="margin: 2px;" src="/images/google_plus.png">
+                    </a>
+</p>
 <p><strong><?php echo _('Tipp:'); ?></strong> <?php echo __('Kürze den Link über einen Link-Verkürzer wie %1$s oder %2$s!', '<a target="_blank" href="https://bitly.com/shorten/">bit.ly</a>', '<a target="_blank" href="http://is.gd/">is.gd</a>'); ?></p>
 <p style="font-size:80%; color:#666;"><?php echo _('Dein Verein erhält die Prämie, sobald der andere Manager seine Manager-Prüfung abgeschlossen hat. Voraussetzung ist allerdings, dass Dein Account und der geworbene Account nicht vom selben Computer aus gesteuert werden.'); ?></p>
 <h1><?php echo _('Geworbene Manager'); ?></h1>

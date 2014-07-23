@@ -193,15 +193,15 @@ $sql2 = mysql_query($sql1);
 $html = ' ';
 while ($sql3 = mysql_fetch_assoc($sql2)) {
     $sql4 = "SELECT shortName FROM ".$prefix."licenseTasks WHERE task = '".$sql3['task']."'";
-	$sql5 = mysql_query($sql4);
-	$sql6 = mysql_fetch_array($sql5); 
+$sql5 = mysql_query($sql4);
+$sql6 = mysql_fetch_array($sql5);
 $html .= showAchiev($sql3['done'], $sql3['task'], $sql6['shortName']);
 }
-echo '<div style="margin-left:5px">'.$html.'<div style="border-top: 1px solid #eff0f1;">';
+echo '<div style="margin-left:5px">'.$html;
 if ($clearedID == $cookie_id) {
-    echo '<a href="/managerPruefung.php?mode=achievements">Display my achievements</a>';
+    echo '<div style="border-top: 1px solid #eff0f1;"><a href="/managerPruefung.php?mode=achievements">Display my achievements</a></div>';
 }
-echo '</div></div>';
+echo '</div>';
 // ACHIEVEMENTS END
 ?>
 <?php
@@ -231,7 +231,7 @@ if ($sql3['team'] != '__'.$cookie_id && $clearedID != '__'.$cookie_id) {
 		$zm2a = mysql_result($zm2, 0);
 		if ($_GET['id'] != $cookie_id) {
 			if ($zm2a == 0) {
-				$gesp3_noch = 21-$cookie_spieltag;
+				$gesp3_noch = 21-GameTime::getMatchDay();
 				if ($gesp3_noch < 3) {
 					echo '<h1>Testspiel vereinbaren</h1><p><strong>Zu spät:</strong> In dieser Saison können leider keine Testspiele mehr vereinbart werden.</p>';
 				}

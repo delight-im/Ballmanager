@@ -22,13 +22,13 @@ while ($a3 = mysql_fetch_assoc($a2)) {
 		// PROTOKOLL ANFANG
 		$formulierung = 'Dein ';
 		if ($a3['leiher'] != 'keiner') { $formulierung .= 'ausgeliehener '; }
-		$formulierung .= 'Spieler <a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a> hat sich wegen seines Alters um '.number_format($minus, 1, ',', '.').' Stärkepunkte verschlechtert.';
+		$formulierung .= __('Spieler %1$s hat sich wegen seines Alters um %2$d Stärkepunkte verschlechtert.', '<a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a>', number_format($minus, 1, ',', '.'));
 		$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$a3['team']."', '".$formulierung."', 'Spieler', '".time()."')";
 		$sql8 = mysql_query($sql7);
 		$entwLog1 = "INSERT INTO ".$prefix."spielerEntwicklung (team, spieler, zeit, staerkeNeu, staerkeAlt) VALUES ('".$a3['team']."', '".$a3['ids']."', ".time().", ".$neu.", ".$a3['staerke'].")";
 		$entwLog2 = mysql_query($entwLog1);
 		if ($a3['leiher'] != 'keiner') {
-			$formulierung = 'Dein verliehener Spieler <a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a> hat sich wegen seines Alters um '.number_format($minus, 1, ',', '.').' Stärkepunkte verschlechtert.';
+			$formulierung = __('Dein verliehener Spieler %1$s hat sich wegen seines Alters um %2$d Stärkepunkte verschlechtert.', '<a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a>', number_format($minus, 1, ',', '.'));
 			$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$a3['leiher']."', '".$formulierung."', 'Spieler', '".time()."')";
 			$sql8 = mysql_query($sql7);
 			$entwLog1 = "INSERT INTO ".$prefix."spielerEntwicklung (team, spieler, zeit, staerkeNeu, staerkeAlt) VALUES ('".$a3['leiher']."', '".$a3['ids']."', ".time().", ".$neu.", ".$a3['staerke'].")";
@@ -59,7 +59,7 @@ while ($a3 = mysql_fetch_assoc($a2)) {
 			$entwLog1 = "INSERT INTO ".$prefix."spielerEntwicklung (team, spieler, zeit, staerkeNeu, staerkeAlt) VALUES ('".$a3['team']."', '".$a3['ids']."', ".time().", ".$neu.", ".$a3['staerke'].")";
 			$entwLog2 = mysql_query($entwLog1);
 			if ($a3['leiher'] != 'keiner') {
-				$formulierung = 'Dein verliehener Spieler <a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a> hat seinen Höhepunkt erreicht und entwickelt sich nicht mehr weiter.';
+				$formulierung = __('Dein verliehener Spieler %s hat seinen Höhepunkt erreicht und entwickelt sich nicht mehr weiter.', '<a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a>');
 				$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$a3['leiher']."', '".$formulierung."', 'Spieler', '".time()."')";
 				$sql8 = mysql_query($sql7);
 				$entwLog1 = "INSERT INTO ".$prefix."spielerEntwicklung (team, spieler, zeit, staerkeNeu, staerkeAlt) VALUES ('".$a3['leiher']."', '".$a3['ids']."', ".time().", ".$neu.", ".$a3['staerke'].")";
@@ -73,13 +73,13 @@ while ($a3 = mysql_fetch_assoc($a2)) {
 			// PROTOKOLL ANFANG
 			$formulierung = 'Dein ';
 			if ($a3['leiher'] != 'keiner') { $formulierung .= 'ausgeliehener '; }
-			$formulierung .= 'Spieler <a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a> hat sich durch Spielpraxis um '.number_format($plus, 1, ',', '.').' Stärkepunkte verbessert.';
+			$formulierung .= __('Spieler %1$s hat sich durch Spielpraxis um %2$d Stärkepunkte verbessert.', '<a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a>', number_format($plus, 1, ',', '.'));
 			$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$a3['team']."', '".$formulierung."', 'Spieler', '".time()."')";
 			$sql8 = mysql_query($sql7);
 			$entwLog1 = "INSERT INTO ".$prefix."spielerEntwicklung (team, spieler, zeit, staerkeNeu, staerkeAlt) VALUES ('".$a3['team']."', '".$a3['ids']."', ".time().", ".$neu.", ".$a3['staerke'].")";
 			$entwLog2 = mysql_query($entwLog1);
 			if ($a3['leiher'] != 'keiner') {
-				$formulierung = 'Dein verliehener Spieler <a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a> hat sich durch Spielpraxis um '.number_format($plus, 1, ',', '.').' Stärkepunkte verbessert.';
+				$formulierung = __('Dein verliehener Spieler %1$s hat sich durch Spielpraxis um %2$d Stärkepunkte verbessert.', '<a href="/spieler.php?id='.$a3['ids'].'">'.$a3['vorname'].' '.$a3['nachname'].'</a> '.number_format($plus, 1, ',', '.'));
 				$sql7 = "INSERT INTO ".$prefix."protokoll (team, text, typ, zeit) VALUES ('".$a3['leiher']."', '".$formulierung."', 'Spieler', '".time()."')";
 				$sql8 = mysql_query($sql7);
 				$entwLog1 = "INSERT INTO ".$prefix."spielerEntwicklung (team, spieler, zeit, staerkeNeu, staerkeAlt) VALUES ('".$a3['leiher']."', '".$a3['ids']."', ".time().", ".$neu.", ".$a3['staerke'].")";

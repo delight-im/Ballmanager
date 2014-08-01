@@ -110,7 +110,6 @@ echo '<div class="matchReport">';
 	echo '<span class="team teamRight">'.$sql3['team2'].'</span>';
 echo '</div>';
 ?>
-<?php if ($loggedin == 1) { ?>
 <?php
 if ($live_scoring_meldung != '') {
 	echo '<p style="text-align:right">';
@@ -307,12 +306,32 @@ if ($sql3['typ'] == 'Liga') {
 <?php
 $abstand_spiel_heute = time()-$sql3['datum'];
 if ($abstand_spiel_heute > -3600) { // wenn das Spiel ueberhaupt schon war dann Kommentare zeigen
+    echo '<p>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Facebook" target="_blank">
+        <img width="32" src="/images/brands/facebook-32.png" alt="Facebook">
+    </a>
+    <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Twitter" target="_blank">
+        <img width="32" src="/images/brands/twitter-32.png" alt="Twitter">
+    </a>
+    <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Google Plus" target="_blank">
+        <img width="32" src="/images/brands/google-plus-32.png" alt="Google Plus">
+    </a></p>';
     echo '<h1>'._('Kommentar des Reporters');
     if ($live_scoring_meldung != '') { echo ' ('.$live_scoring_min_gespielt.'. Minute)'; }
     echo '</h1>';
     echo $kommentar_liste;
 }
 elseif ($live_scoring_spieltyp_laeuft == '') {
+	echo '<p>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Facebook" target="_blank">
+        <img width="32" src="/images/brands/facebook-32.png" alt="Facebook">
+    </a>
+    <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Twitter" target="_blank">
+        <img width="32" src="/images/brands/twitter-32.png" alt="Twitter">
+    </a>
+    <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Google Plus" target="_blank">
+        <img width="32" src="/images/brands/google-plus-32.png" alt="Google Plus">
+    </a></p>';
 	echo '<h1>'._('Mögliche RKP-Veränderungen').'</h1>';
 	$ergebnisStrings = array('0:0', '1:0', '2:0', '3:0', '0:3', '0:2', '0:1');
 	echo '<table><thead><tr class="odd"><th scope="col">'._('Ergebnis').'</th><th scope="col">'.$sql3['team1'].' ('.round($eloTeam1).')</th><th scope="col">'.$sql3['team2'].' ('.round($eloTeam2).')</th></tr></thead><tbody>';
@@ -326,7 +345,4 @@ elseif ($live_scoring_spieltyp_laeuft == '') {
 	echo '</tbody></table>';
 }
 ?>
-<?php } else { ?>
-<p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
-<?php } ?>
 <?php include 'zz3.php'; ?>

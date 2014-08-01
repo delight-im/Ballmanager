@@ -307,14 +307,14 @@ if ($sql3['typ'] == 'Liga') {
 $abstand_spiel_heute = time()-$sql3['datum'];
 if ($abstand_spiel_heute > -3600) { // wenn das Spiel ueberhaupt schon war dann Kommentare zeigen
     echo '<p>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Facebook" target="_blank">
-        <img width="32" src="/images/brands/facebook-32.png" alt="Facebook">
+    <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Facebook" src="/images/brands/facebook-32.png" width="32" />
     </a>
-    <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Twitter" target="_blank">
-        <img width="32" src="/images/brands/twitter-32.png" alt="Twitter">
+    <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Twitter" src="/images/brands/twitter-32.png" width="32" />
     </a>
-    <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Google Plus" target="_blank">
-        <img width="32" src="/images/brands/google-plus-32.png" alt="Google Plus">
+    <a target="_blank" title="Google Plus" href="https://plus.google.com/share?url=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Google Plus" src="/images/brands/google-plus-32.png" width="32" />
     </a></p>';
     echo '<h1>'._('Kommentar des Reporters');
     if ($live_scoring_meldung != '') { echo ' ('.$live_scoring_min_gespielt.'. Minute)'; }
@@ -323,14 +323,14 @@ if ($abstand_spiel_heute > -3600) { // wenn das Spiel ueberhaupt schon war dann 
 }
 elseif ($live_scoring_spieltyp_laeuft == '') {
 	echo '<p>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Facebook" target="_blank">
-        <img width="32" src="/images/brands/facebook-32.png" alt="Facebook">
+    <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Facebook" src="/images/brands/facebook-32.png" width="32" />
     </a>
-    <a href="https://twitter.com/share?url=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Twitter" target="_blank">
-        <img width="32" src="/images/brands/twitter-32.png" alt="Twitter">
+    <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Twitter" src="/images/brands/twitter-32.png" width="32" />
     </a>
-    <a href="https://plus.google.com/share?url=http%3A%2F%2Fwww.opensoccer.org%2F%3Fr%3D862eae52640f28975013b0b8e5ccdc70" title="Google Plus" target="_blank">
-        <img width="32" src="/images/brands/google-plus-32.png" alt="Google Plus">
+    <a target="_blank" title="Google Plus" href="https://plus.google.com/share?url=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Google Plus" src="/images/brands/google-plus-32.png" width="32" />
     </a></p>';
 	echo '<h1>'._('Mögliche RKP-Veränderungen').'</h1>';
 	$ergebnisStrings = array('0:0', '1:0', '2:0', '3:0', '0:3', '0:2', '0:1');

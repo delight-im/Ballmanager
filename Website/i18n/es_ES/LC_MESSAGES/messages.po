@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ballmanager\n"
-"POT-Creation-Date: 2014-07-28 00:09-0300\n"
-"PO-Revision-Date: 2014-08-01 18:30+0100\n"
-"Last-Translator: Marco <marco1@live.de>\n"
+"POT-Creation-Date: 2014-08-01 13:14-0300\n"
+"PO-Revision-Date: 2014-08-04 22:40-0300\n"
+"Last-Translator: Cosme12 <test@example.com>\n"
 "Language-Team: \n"
 "Language: es_ES\n"
 "MIME-Version: 1.0\n"
@@ -1316,16 +1316,16 @@ msgstr ""
 #: ../../../einstellungen.php:261 ../../../index.php:272
 #: ../../../ligaTausch.php:183 ../../../multiAccounts.php:105
 #: ../../../multiAccounts.php:116 ../../../postausgang.php:77
-#: ../../../posteingang.php:81 ../../../spieler.php:64
-#: ../../../spieler.php:199 ../../../spieler.php:216 ../../../spieler.php:230
-#: ../../../spieler.php:245 ../../../sponsoren.php:79 ../../../support.php:31
+#: ../../../posteingang.php:81 ../../../spieler.php:70
+#: ../../../spieler.php:207 ../../../spieler.php:224 ../../../spieler.php:238
+#: ../../../spieler.php:253 ../../../sponsoren.php:79 ../../../support.php:31
 #: ../../../supportRequest.php:142 ../../../supportRequest.php:145
 #: ../../../supportRequest.php:146 ../../../supportRequest.php:149
 #: ../../../supportRequest.php:219 ../../../supportRequest.php:257
 #: ../../../supportRequest.php:304 ../../../supportRequest.php:311
 #: ../../../taktik.php:168 ../../../taktik.php:171 ../../../taktik.php:180
-#: ../../../transfermarkt_auktion.php:170 ../../../transfermarkt_leihe.php:192
-#: ../../../transfermarkt_leihe.php:202 ../../../ver_personal.php:299
+#: ../../../transfermarkt_auktion.php:170 ../../../transfermarkt_leihe.php:205
+#: ../../../transfermarkt_leihe.php:215 ../../../ver_personal.php:299
 #: ../../../ver_stadion.php:256 ../../../ver_stadion.php:277
 #: ../../../ver_stadion.php:303
 msgid "Bist Du sicher?"
@@ -1341,34 +1341,34 @@ msgstr "Mis jugadores"
 
 #: ../../../aufstellung.php:287 ../../../beobachtung.php:37
 #: ../../../entwicklung.php:11 ../../../kader.php:56
-#: ../../../leihgaben.php:157 ../../../leihgaben.php:194 ../../../team.php:129
-#: ../../../transfermarkt.php:191 ../../../transfermarkt_leihe.php:114
+#: ../../../leihgaben.php:157 ../../../leihgaben.php:194 ../../../team.php:128
+#: ../../../transfermarkt.php:190 ../../../transfermarkt_leihe.php:120
 msgid "MT"
 msgstr "Po"
 
 #: ../../../aufstellung.php:288 ../../../kader.php:58
 #: ../../../leihgaben.php:158 ../../../leihgaben.php:195
 #: ../../../manager.php:150 ../../../stat_torjaegerliste.php:55
-#: ../../../team.php:131
+#: ../../../team.php:130
 msgid "Name"
 msgstr "Nombre"
 
 #: ../../../aufstellung.php:289 ../../../kader.php:59
-#: ../../../leihgaben.php:159 ../../../leihgaben.php:196 ../../../team.php:132
-#: ../../../transfermarkt.php:191 ../../../transfermarkt_leihe.php:114
+#: ../../../leihgaben.php:159 ../../../leihgaben.php:196 ../../../team.php:131
+#: ../../../transfermarkt.php:190 ../../../transfermarkt_leihe.php:120
 #: ../../../vertraege.php:11
 msgid "AL"
 msgstr "Ed"
 
 #: ../../../aufstellung.php:290 ../../../beobachtung.php:41
-#: ../../../kader.php:60 ../../../spieler.php:91
+#: ../../../kader.php:60 ../../../spieler.php:99
 #: ../../../stat_staerkste_ligen_a.php:21
-#: ../../../stat_staerkste_ligen_k.php:21 ../../../team.php:133
+#: ../../../stat_staerkste_ligen_k.php:21 ../../../team.php:132
 #: ../../../vertraege.php:13
 msgid "Stärke"
 msgstr "Fuerza"
 
-#: ../../../aufstellung.php:291 ../../../team.php:134
+#: ../../../aufstellung.php:291 ../../../team.php:133
 msgid "FR"
 msgstr "Fr"
 
@@ -1380,8 +1380,8 @@ msgstr "Mo"
 #: ../../../entwicklung.php:43 ../../../kader.php:164
 #: ../../../leihgaben.php:180 ../../../leihgaben.php:217
 #: ../../../lig_tabelle.php:219 ../../../stat_globale_tabelle.php:53
-#: ../../../team.php:187 ../../../transfermarkt.php:226
-#: ../../../transfermarkt_leihe.php:212 ../../../vertraege.php:86
+#: ../../../team.php:186 ../../../transfermarkt.php:225
+#: ../../../transfermarkt_leihe.php:225 ../../../vertraege.php:86
 msgid "Überschriften:"
 msgstr "Encabezados:"
 
@@ -1391,15 +1391,15 @@ msgstr "SE: titulares, Po: posición, Ed: edad, Fr: frescura, Mo: moral"
 
 #: ../../../aufstellung.php:341 ../../../beobachtung.php:120
 #: ../../../entwicklung.php:44 ../../../kader.php:165
-#: ../../../leihgaben.php:181 ../../../leihgaben.php:218 ../../../team.php:188
-#: ../../../transfermarkt.php:227 ../../../transfermarkt_leihe.php:213
+#: ../../../leihgaben.php:181 ../../../leihgaben.php:218 ../../../team.php:187
+#: ../../../transfermarkt.php:226 ../../../transfermarkt_leihe.php:226
 msgid "Mannschaftsteile:"
 msgstr "Posiciones:"
 
 #: ../../../aufstellung.php:341 ../../../beobachtung.php:120
 #: ../../../entwicklung.php:44 ../../../kader.php:165
-#: ../../../leihgaben.php:181 ../../../leihgaben.php:218 ../../../team.php:188
-#: ../../../transfermarkt.php:227 ../../../transfermarkt_leihe.php:213
+#: ../../../leihgaben.php:181 ../../../leihgaben.php:218 ../../../team.php:187
+#: ../../../transfermarkt.php:226 ../../../transfermarkt_leihe.php:226
 msgid "T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm"
 msgstr "T: Arquero, A: Defensor, M: Mediocampista, S: Delantero"
 
@@ -1415,7 +1415,7 @@ msgstr "jugadores en formación"
 msgid "Rote Schrift:"
 msgstr "Fuente roja:"
 
-#: ../../../aufstellung.php:343 ../../../kader.php:166 ../../../team.php:189
+#: ../../../aufstellung.php:343 ../../../kader.php:166 ../../../team.php:188
 msgid "verletzte oder gesperrte Spieler"
 msgstr "jugadores lesionados o suspendidos"
 
@@ -1427,17 +1427,15 @@ msgstr "jugadores lesionados o suspendidos"
 #: ../../../gruendeFuerLoeschung.php:42 ../../../ipInfo.php:43
 #: ../../../kader.php:240 ../../../kalender.php:112 ../../../leihgaben.php:223
 #: ../../../lig_tabelle.php:54 ../../../lig_testspiele_liste.php:79
-#: ../../../lig_transfers.php:150 ../../../ligaTausch.php:208
-#: ../../../ligaTauschWuensche.php:67 ../../../liveZentrale.php:156
-#: ../../../logoutNewUser.php:25 ../../../manager.php:320
-#: ../../../managerPruefung.php:78 ../../../manager_der_saison.php:208
-#: ../../../marktschreier.php:60 ../../../multiAccounts.php:253
-#: ../../../namensaenderung.php:168 ../../../neueAccounts.php:67
-#: ../../../notizen.php:58 ../../../pokal.php:243 ../../../post.php:6
-#: ../../../post_schreiben.php:9 ../../../post_schreiben.php:136
-#: ../../../postausgang.php:16 ../../../posteingang.php:16
-#: ../../../protokoll.php:100 ../../../spielbericht.php:330
-#: ../../../spieler.php:259 ../../../spieler_historie.php:130
+#: ../../../ligaTausch.php:208 ../../../ligaTauschWuensche.php:67
+#: ../../../liveZentrale.php:156 ../../../logoutNewUser.php:25
+#: ../../../manager.php:320 ../../../managerPruefung.php:78
+#: ../../../manager_der_saison.php:208 ../../../marktschreier.php:60
+#: ../../../multiAccounts.php:253 ../../../namensaenderung.php:168
+#: ../../../neueAccounts.php:67 ../../../notizen.php:58 ../../../pokal.php:243
+#: ../../../post.php:6 ../../../post_schreiben.php:9
+#: ../../../post_schreiben.php:136 ../../../postausgang.php:16
+#: ../../../posteingang.php:16 ../../../protokoll.php:100
 #: ../../../sponsoren.php:115 ../../../stat_5jahresWertung.php:61
 #: ../../../stat_cupsieger.php:69 ../../../stat_dauerbrenner.php:65
 #: ../../../stat_ergebnisverlauf.php:69 ../../../stat_geldwert.php:78
@@ -1455,11 +1453,10 @@ msgstr "jugadores lesionados o suspendidos"
 #: ../../../stat_wertvollste_teams.php:89
 #: ../../../stat_zuschauerverlauf.php:44 ../../../support.php:283
 #: ../../../supportAdd.php:49 ../../../supportRequest.php:345
-#: ../../../taktik.php:192 ../../../team.php:191 ../../../testWuensche.php:60
+#: ../../../taktik.php:192 ../../../testWuensche.php:60
 #: ../../../testspiele.php:167 ../../../tipps_des_tages.php:40
 #: ../../../top_manager.php:115 ../../../transferliste.php:42
-#: ../../../transfermarkt.php:249 ../../../transfermarkt_auktion.php:183
-#: ../../../transfermarkt_leihe.php:235 ../../../ver_buchungen.php:64
+#: ../../../transfermarkt_auktion.php:184 ../../../ver_buchungen.php:64
 #: ../../../ver_finanzen.php:120 ../../../ver_lotto.php:153
 #: ../../../ver_personal.php:333 ../../../ver_stadion.php:316
 #: ../../../vertraege.php:88 ../../../vertrag_verlaengern.php:161
@@ -1488,11 +1485,11 @@ msgstr "Se eliminaron %d jugadores de tu lista de observación."
 
 #: ../../../beobachtung.php:38 ../../../entwicklung.php:12
 #: ../../../index.php:164 ../../../kader.php:173 ../../../leihgaben.php:106
-#: ../../../leihgaben.php:133 ../../../lig_transfers.php:49
+#: ../../../leihgaben.php:133 ../../../lig_transfers.php:50
 #: ../../../stat_dauerbrenner.php:20 ../../../stat_transfer_uebersicht.php:40
 #: ../../../stat_treuesteSpieler.php:34
 #: ../../../stat_wertvollste_spieler.php:48 ../../../transferliste.php:10
-#: ../../../transfermarkt.php:191 ../../../transfermarkt_leihe.php:114
+#: ../../../transfermarkt.php:190 ../../../transfermarkt_leihe.php:120
 #: ../../../vertraege.php:10
 msgid "Spieler"
 msgstr "Jugador"
@@ -1502,16 +1499,16 @@ msgid "Status"
 msgstr "Estado"
 
 #: ../../../beobachtung.php:40 ../../../entwicklung.php:13
-#: ../../../index.php:165 ../../../spieler.php:90
+#: ../../../index.php:165 ../../../spieler.php:98
 #: ../../../stat_juengste_kader.php:49
 msgid "Alter"
 msgstr "Edad"
 
-#: ../../../beobachtung.php:43 ../../../transfermarkt.php:191
+#: ../../../beobachtung.php:43 ../../../transfermarkt.php:190
 msgid "Noch"
 msgstr "Quedan"
 
-#: ../../../beobachtung.php:57 ../../../spieler.php:132
+#: ../../../beobachtung.php:57 ../../../spieler.php:140
 msgid "Unverkäuflich"
 msgstr ""
 
@@ -1519,7 +1516,7 @@ msgstr ""
 msgid "Zum Verkauf"
 msgstr ""
 
-#: ../../../beobachtung.php:59 ../../../spieler.php:143
+#: ../../../beobachtung.php:59 ../../../spieler.php:151
 #, fuzzy
 msgid "Zur Leihgabe"
 msgstr "Préstamos"
@@ -1544,45 +1541,45 @@ msgstr "Realizar"
 
 #: ../../../beobachtung.php:103 ../../../chat_reports.php:82
 #: ../../../entwicklung.php:50 ../../../geloeschteAccounts.php:24
-#: ../../../gruendeFuerLoeschung.php:24 ../../../lig_transfers.php:132
+#: ../../../gruendeFuerLoeschung.php:24 ../../../lig_transfers.php:133
 #: ../../../multiAccounts.php:234 ../../../neueAccounts.php:49
 #: ../../../postausgang.php:83 ../../../posteingang.php:87
 #: ../../../protokoll.php:82 ../../../support.php:222
-#: ../../../top_manager.php:98 ../../../transfermarkt.php:232
-#: ../../../transfermarkt_leihe.php:218 ../../../ver_buchungen.php:47
+#: ../../../top_manager.php:98 ../../../transfermarkt.php:231
+#: ../../../transfermarkt_leihe.php:231 ../../../ver_buchungen.php:47
 msgid "Erste"
 msgstr "Primero"
 
 #: ../../../beobachtung.php:104 ../../../chat_reports.php:83
 #: ../../../entwicklung.php:51 ../../../geloeschteAccounts.php:25
-#: ../../../gruendeFuerLoeschung.php:25 ../../../lig_transfers.php:133
+#: ../../../gruendeFuerLoeschung.php:25 ../../../lig_transfers.php:134
 #: ../../../multiAccounts.php:235 ../../../neueAccounts.php:50
 #: ../../../postausgang.php:84 ../../../posteingang.php:88
 #: ../../../protokoll.php:83 ../../../support.php:223
-#: ../../../top_manager.php:99 ../../../transfermarkt.php:233
-#: ../../../transfermarkt_leihe.php:219 ../../../ver_buchungen.php:48
+#: ../../../top_manager.php:99 ../../../transfermarkt.php:232
+#: ../../../transfermarkt_leihe.php:232 ../../../ver_buchungen.php:48
 msgid "Vorherige"
 msgstr "Anterior"
 
 #: ../../../beobachtung.php:115 ../../../chat_reports.php:94
 #: ../../../entwicklung.php:62 ../../../geloeschteAccounts.php:36
-#: ../../../gruendeFuerLoeschung.php:36 ../../../lig_transfers.php:144
+#: ../../../gruendeFuerLoeschung.php:36 ../../../lig_transfers.php:145
 #: ../../../multiAccounts.php:246 ../../../neueAccounts.php:61
 #: ../../../postausgang.php:95 ../../../posteingang.php:99
 #: ../../../protokoll.php:94 ../../../support.php:234
-#: ../../../top_manager.php:110 ../../../transfermarkt.php:244
-#: ../../../transfermarkt_leihe.php:230 ../../../ver_buchungen.php:59
+#: ../../../top_manager.php:110 ../../../transfermarkt.php:243
+#: ../../../transfermarkt_leihe.php:243 ../../../ver_buchungen.php:59
 msgid "Nächste"
 msgstr "Siguiente"
 
 #: ../../../beobachtung.php:116 ../../../chat_reports.php:95
 #: ../../../entwicklung.php:63 ../../../geloeschteAccounts.php:37
-#: ../../../gruendeFuerLoeschung.php:37 ../../../lig_transfers.php:145
+#: ../../../gruendeFuerLoeschung.php:37 ../../../lig_transfers.php:146
 #: ../../../multiAccounts.php:247 ../../../neueAccounts.php:62
 #: ../../../postausgang.php:96 ../../../posteingang.php:100
 #: ../../../protokoll.php:95 ../../../support.php:235
-#: ../../../top_manager.php:111 ../../../transfermarkt.php:245
-#: ../../../transfermarkt_leihe.php:231 ../../../ver_buchungen.php:60
+#: ../../../top_manager.php:111 ../../../transfermarkt.php:244
+#: ../../../transfermarkt_leihe.php:244 ../../../ver_buchungen.php:60
 msgid "Letzte"
 msgstr "Último"
 
@@ -1776,8 +1773,8 @@ msgstr "Reportado por"
 #: ../../../lig_tabelle.php:244 ../../../lig_testspiele_liste.php:42
 #: ../../../ligaTausch.php:166 ../../../ligaTausch.php:193
 #: ../../../postausgang.php:39 ../../../posteingang.php:47
-#: ../../../protokoll.php:54 ../../../spielbericht.php:292
-#: ../../../spieler_historie.php:27 ../../../spieler_historie.php:95
+#: ../../../protokoll.php:54 ../../../spielbericht.php:291
+#: ../../../spieler_historie.php:26 ../../../spieler_historie.php:94
 #: ../../../stat_ligaTausch.php:12 ../../../stat_transfer_uebersicht.php:43
 #: ../../../testspiele.php:82 ../../../testspiele.php:135
 msgid "Datum"
@@ -1789,7 +1786,7 @@ msgstr "Suspensión"
 
 #: ../../../chat_reports.php:69
 msgid "Aufheben"
-msgstr ""
+msgstr "Cancelar"
 
 #: ../../../cup.php:2 ../../../cup.php:35 ../../../cup.php:136
 msgid "Nationaler Cup"
@@ -1832,11 +1829,11 @@ msgid "Team 2"
 msgstr "Equipo 2"
 
 #: ../../../cup.php:134 ../../../leihgaben.php:121
-#: ../../../lig_transfers.php:125 ../../../ligaTauschWuensche.php:63
+#: ../../../lig_transfers.php:126 ../../../ligaTauschWuensche.php:63
 #: ../../../liveZentrale.php:153 ../../../namensaenderung.php:60
 #: ../../../notizen.php:52 ../../../pokal.php:196 ../../../protokoll.php:77
-#: ../../../transfermarkt.php:225 ../../../transfermarkt_auktion.php:177
-#: ../../../transfermarkt_leihe.php:211 ../../../wio.php:35
+#: ../../../transfermarkt.php:224 ../../../transfermarkt_auktion.php:178
+#: ../../../transfermarkt_leihe.php:224 ../../../wio.php:35
 msgid "Hinweis:"
 msgstr "Notas:"
 
@@ -2100,7 +2097,7 @@ msgid "Freunde"
 msgstr "Amigos"
 
 #: ../../../freunde.php:9 ../../../ligaTausch.php:183 ../../../manager.php:225
-#: ../../../zz2.php:245
+#: ../../../zz2.php:199 ../../../zz2.php:245
 msgid "Anfragen"
 msgstr "Solicitudes"
 
@@ -2109,7 +2106,7 @@ msgstr "Solicitudes"
 #: ../../../manager_der_saison.php:73 ../../../manager_der_saison.php:185
 #: ../../../multiAccounts.php:215 ../../../neueAccounts.php:12
 #: ../../../stat_ligaTausch.php:13 ../../../stat_meiste_titel.php:67
-#: ../../../support.php:245 ../../../team.php:70 ../../../top_manager.php:50
+#: ../../../support.php:245 ../../../team.php:69 ../../../top_manager.php:50
 #: ../../../wio.php:6 ../../../wio.php:38
 msgid "Manager"
 msgstr "Mánager"
@@ -2326,14 +2323,14 @@ msgid "Die folgenden %1$s sind unvollständig: %2$s"
 msgstr "Las siguientes  %1$s estan incompletas: %2$s"
 
 #: ../../../index.php:52
-#, php-format
-msgid "<a class=\"inText\" href=\"/vertraege.php\">%d Verträge</a>"
-msgstr ""
+#, fuzzy, php-format
+msgid "%d Verträge"
+msgstr "Contratos"
 
 #: ../../../index.php:52
 #, php-format
 msgid "In den nächsten drei Tagen laufen %s aus."
-msgstr ""
+msgstr "%s vencerán el los próximos días."
 
 #: ../../../index.php:55
 msgid "Klicke hier, um jetzt einen Vertrag abzuschließen."
@@ -2346,14 +2343,14 @@ msgid ""
 "abgeschlossen. %s"
 msgstr "Aún no has invitado ningun usuario!"
 
-#: ../../../index.php:58 ../../../spielbericht.php:118
+#: ../../../index.php:58 ../../../spielbericht.php:117
 msgid "Zur LIVE-Zentrale"
 msgstr "Ir al Centro en VIVO"
 
 #: ../../../index.php:58
 #, php-format
 msgid "LIVE: %1$s-spiele von heute! %2$s"
-msgstr ""
+msgstr "VIVO: %1$s en este momento! %2$s"
 
 #: ../../../index.php:61
 msgid "Jetzt abstimmen"
@@ -2362,7 +2359,7 @@ msgstr "Vota ahora"
 #: ../../../index.php:61
 #, php-format
 msgid "Die Wahl zum &quot;Manager der Saison&quot; läuft! %s"
-msgstr "¡La votación del &quot;Mánager del Año&quot; ya comenzó! %sS"
+msgstr "¡La votación del &quot;Mánager del Año&quot; ya comenzó! %s"
 
 #: ../../../index.php:64 ../../../managerPruefung.php:2
 #: ../../../managerPruefung.php:25
@@ -2384,10 +2381,10 @@ msgstr "Tu club: %s"
 
 #: ../../../index.php:73
 msgid "Lade Deine Freunde ein und erhalte 7,5 Mio. Bonus!"
-msgstr "¡Invita a tus amigos y consegue 7,5 millones de regalo!"
+msgstr "¡Invita a tus amigos y consigue 7,5 millones de regalo!"
 
 #: ../../../index.php:79 ../../../manager.php:143
-#: ../../../spielbericht.php:285 ../../../spieler.php:76 ../../../team.php:45
+#: ../../../spielbericht.php:284 ../../../spieler.php:84 ../../../team.php:44
 #: ../../../ver_finanzen.php:89 ../../../ver_stadion.php:210
 msgid "Bereich"
 msgstr "Sección"
@@ -2411,6 +2408,11 @@ msgstr "Copa Nacional"
 msgid "RKP"
 msgstr "RKP"
 
+#: ../../../index.php:97
+#, fuzzy, php-format
+msgid "%s Punkte"
+msgstr "Puntos"
+
 #: ../../../index.php:98
 msgid "Kontostand"
 msgstr "Saldo bancario"
@@ -2423,17 +2425,42 @@ msgstr "Uso en subastas"
 msgid "Verfügbares Geld"
 msgstr "Dinero disponible"
 
-#: ../../../index.php:101 ../../../team.php:77
+#: ../../../index.php:101 ../../../team.php:76
 msgid "Aufstellungsstärke"
 msgstr "Resistencia de la formación"
 
-#: ../../../index.php:102 ../../../team.php:76
+#: ../../../index.php:102 ../../../team.php:75
 msgid "Kaderstärke"
 msgstr "Fuerza del plantel"
 
 #: ../../../index.php:103
 msgid "Jugendabteilung"
 msgstr "Departamento de Juveniles"
+
+#: ../../../index.php:106 ../../../spieler.php:92
+#: ../../../transfermarkt.php:68 ../../../transfermarkt_leihe.php:36
+msgid "Torwart"
+msgstr "Arquero"
+
+#: ../../../index.php:107 ../../../spieler.php:93
+#: ../../../transfermarkt.php:71 ../../../transfermarkt_leihe.php:37
+msgid "Abwehr"
+msgstr "Defensor"
+
+#: ../../../index.php:108 ../../../spieler.php:94
+#: ../../../transfermarkt.php:74 ../../../transfermarkt_leihe.php:38
+msgid "Mittelfeld"
+msgstr "Mediocampista"
+
+#: ../../../index.php:109 ../../../spieler.php:95
+#: ../../../transfermarkt.php:77 ../../../transfermarkt_leihe.php:39
+msgid "Sturm"
+msgstr "Delantero"
+
+#: ../../../index.php:112
+#, php-format
+msgid "%s gesucht"
+msgstr ""
 
 #: ../../../index.php:119
 msgid "morgen"
@@ -2456,9 +2483,14 @@ msgstr "Consejo del día"
 msgid "Nächster Jugendspieler"
 msgstr "Próximo juvenil"
 
+#: ../../../index.php:129 ../../../index.php:141
+#, php-format
+msgid "Spieltag %d"
+msgstr "Fecha %d"
+
 #: ../../../index.php:131 ../../../lig_testspiele_liste.php:2
 #: ../../../lig_testspiele_liste.php:37 ../../../lig_testspiele_liste.php:78
-#: ../../../team.php:82 ../../../testspiele.php:2 ../../../testspiele.php:166
+#: ../../../team.php:81 ../../../testspiele.php:2 ../../../testspiele.php:166
 #: ../../../zz2.php:186 ../../../zz2.php:202
 msgid "Testspiele"
 msgstr "Amistosos"
@@ -2478,11 +2510,6 @@ msgstr "Temporada %d"
 
 #: ../../../index.php:141
 #, php-format
-msgid "Spieltag %d"
-msgstr "Fecha %d"
-
-#: ../../../index.php:141
-#, php-format
 msgid "%s Uhr"
 msgstr "%s hs"
 
@@ -2498,7 +2525,7 @@ msgstr ""
 "Los contratos de los siguientes jugadores se estan por vencer. Debes "
 "extender la fecha para que tus jugadores permanezcan en tu equipo:"
 
-#: ../../../index.php:166 ../../../spieler.php:119
+#: ../../../index.php:166 ../../../spieler.php:127
 msgid "Vertrag bis"
 msgstr "Contrato hasta"
 
@@ -2511,8 +2538,8 @@ msgid "Suche nach Teams oder Managern"
 msgstr "Buscar equipos o mánagers"
 
 #: ../../../index.php:183 ../../../manager_der_saison.php:68
-#: ../../../support.php:36 ../../../transfermarkt.php:116
-#: ../../../transfermarkt_leihe.php:55
+#: ../../../support.php:36 ../../../tipps_des_tages.php:7
+#: ../../../transfermarkt.php:116 ../../../transfermarkt_leihe.php:57
 msgid "Suchen"
 msgstr "Buscar"
 
@@ -2620,7 +2647,7 @@ msgstr ""
 #: ../../../leihgaben.php:199 ../../../lig_tabelle.php:125
 #: ../../../ligaTausch.php:166 ../../../ligaTausch.php:193
 #: ../../../ligaTauschWuensche.php:52 ../../../manager.php:153
-#: ../../../spieler.php:114 ../../../spieler.php:117
+#: ../../../spieler.php:122 ../../../spieler.php:125
 #: ../../../stat_dauerbrenner.php:21 ../../../stat_geschichte.php:59
 #: ../../../stat_globale_tabelle.php:27 ../../../stat_juengste_kader.php:48
 #: ../../../stat_meiste_titel.php:68 ../../../stat_meiste_zuschauer.php:48
@@ -2632,7 +2659,7 @@ msgstr "Equipo"
 
 #: ../../../index.php:264 ../../../leihgaben.php:133
 #: ../../../testspiele.php:82 ../../../testspiele.php:120
-#: ../../../transfermarkt_leihe.php:114 ../../../wio.php:6 ../../../wio.php:38
+#: ../../../transfermarkt_leihe.php:120 ../../../wio.php:6 ../../../wio.php:38
 msgid "Aktion"
 msgstr "Acción"
 
@@ -2803,7 +2830,7 @@ msgstr "Usuario"
 msgid "Letzter Login"
 msgstr "Última conexión"
 
-#: ../../../kader.php:2 ../../../kader.php:14 ../../../team.php:125
+#: ../../../kader.php:2 ../../../kader.php:14 ../../../team.php:124
 #: ../../../zz2.php:175
 msgid "Kader"
 msgstr "Plantel"
@@ -2811,9 +2838,9 @@ msgstr "Plantel"
 #: ../../../kader.php:28
 #, php-format
 msgid "Dein Jugendtrainer sucht ab sofort %s."
-msgstr "Su entrenador de juveniles está esta buscando un %s"
+msgstr "Tu entrenador de juveniles está buscando un %s"
 
-#: ../../../kader.php:57 ../../../team.php:130
+#: ../../../kader.php:57 ../../../team.php:129
 msgid "TS"
 msgstr "ET"
 
@@ -2829,16 +2856,16 @@ msgstr "VM"
 msgid "Verliehen"
 msgstr "Cedido"
 
-#: ../../../kader.php:120 ../../../spieler.php:129
+#: ../../../kader.php:120 ../../../spieler.php:137
 msgid "Ausgeliehen"
 msgstr "Prestado"
 
-#: ../../../kader.php:146 ../../../team.php:182
+#: ../../../kader.php:146 ../../../team.php:181
 #, php-format
 msgid "Team-Alter: %s Jahre"
 msgstr "Edad del plantel: %s años"
 
-#: ../../../kader.php:147 ../../../team.php:183
+#: ../../../kader.php:147 ../../../team.php:182
 #, php-format
 msgid "Team-Marktwert: %s €"
 msgstr "Valor del plantel: %s €"
@@ -2860,7 +2887,7 @@ msgstr ""
 "Po: posición, ET: estado de transferencia, Ed: edad, PO: partidos oficiales "
 "(goles), VM: valor de mercado en millones €"
 
-#: ../../../kader.php:166 ../../../team.php:189
+#: ../../../kader.php:166 ../../../team.php:188
 msgid "Durchgestrichen:"
 msgstr "Tachado:"
 
@@ -2868,7 +2895,7 @@ msgstr "Tachado:"
 msgid "Besetzung des Kaders"
 msgstr "Composición del plantel"
 
-#: ../../../kader.php:171 ../../../spieler.php:83
+#: ../../../kader.php:171 ../../../spieler.php:91
 msgid "Position"
 msgstr "Posición"
 
@@ -2909,6 +2936,10 @@ msgstr "Todos"
 msgid "Test"
 msgstr "Amistoso"
 
+#: ../../../kalender.php:38 ../../../lig_transfers.php:30
+msgid "Zum Teamprofil"
+msgstr "Mi equipo"
+
 #: ../../../kalender.php:46
 msgid "Anstoß"
 msgstr "Saque inicial"
@@ -2918,8 +2949,8 @@ msgid "Gegner"
 msgstr "Oponente"
 
 #: ../../../kalender.php:48 ../../../lig_tabelle.php:247
-#: ../../../lig_testspiele_liste.php:45 ../../../spielbericht.php:291
-#: ../../../spielbericht.php:318 ../../../testspiele.php:135
+#: ../../../lig_testspiele_liste.php:45 ../../../spielbericht.php:290
+#: ../../../spielbericht.php:317 ../../../testspiele.php:135
 msgid "Ergebnis"
 msgstr "Resultado"
 
@@ -2988,17 +3019,17 @@ msgid "Leihgaben"
 msgstr "Préstamos"
 
 #: ../../../leihgaben.php:24 ../../../transfermarkt_auktion.php:107
-#: ../../../transfermarkt_leihe.php:108
+#: ../../../transfermarkt_leihe.php:114
 msgid "gesperrt"
 msgstr "cerrado"
 
 #: ../../../leihgaben.php:24 ../../../transfermarkt_auktion.php:107
-#: ../../../transfermarkt_leihe.php:108
+#: ../../../transfermarkt_leihe.php:114
 msgid "Team-Mitglied"
 msgstr ""
 
 #: ../../../leihgaben.php:24 ../../../transfermarkt_auktion.php:107
-#: ../../../transfermarkt_leihe.php:108
+#: ../../../transfermarkt_leihe.php:114
 #, php-format
 msgid ""
 "Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage "
@@ -3058,11 +3089,11 @@ msgstr "¿Respuesta?"
 msgid "Dein Co-Trainer hat die Anfrage abgelehnt (2-Transfers-Sperre)"
 msgstr ""
 
-#: ../../../leihgaben.php:118 ../../../spieler.php:163
+#: ../../../leihgaben.php:118 ../../../spieler.php:171
 msgid "Ja"
 msgstr "Si"
 
-#: ../../../leihgaben.php:118 ../../../spieler.php:156
+#: ../../../leihgaben.php:118 ../../../spieler.php:164
 msgid "Nein"
 msgstr "No"
 
@@ -3101,12 +3132,12 @@ msgid ""
 msgstr ""
 
 #: ../../../leihgaben.php:160 ../../../leihgaben.php:197
-#: ../../../transfermarkt.php:191 ../../../transfermarkt_leihe.php:114
+#: ../../../transfermarkt.php:190 ../../../transfermarkt_leihe.php:120
 msgid "ST"
 msgstr ""
 
 #: ../../../leihgaben.php:163 ../../../leihgaben.php:200
-#: ../../../transfermarkt_leihe.php:114
+#: ../../../transfermarkt_leihe.php:120
 msgid "Prämie p.P."
 msgstr ""
 
@@ -3286,6 +3317,11 @@ msgstr "Aceptar"
 msgid "Manager-Talk"
 msgstr "Charla de Mánagers"
 
+#: ../../../lig_tabelle.php:296 ../../../manager.php:281 ../../../pokal.php:96
+#, php-format
+msgid "%1$s schrieb am %2$s:"
+msgstr "%1$s escribió el %2$s:"
+
 #: ../../../lig_tabelle.php:298 ../../../marktschreier.php:54
 #: ../../../pokal.php:236 ../../../testWuensche.php:54
 msgid "[Löschen]"
@@ -3295,84 +3331,79 @@ msgstr "[Borrar]"
 msgid "Spieltag auswählen"
 msgstr "Elegir fecha"
 
-#: ../../../lig_transfers.php:2 ../../../lig_transfers.php:21
-#: ../../../lig_transfers.php:149 ../../../ver_finanzen.php:103
-#: ../../../zz2.php:162
+#: ../../../lig_transfers.php:2 ../../../lig_transfers.php:20
+#: ../../../ver_finanzen.php:103 ../../../zz2.php:162
 msgid "Transfers"
 msgstr "Transferencias"
 
-#: ../../../lig_transfers.php:20
+#: ../../../lig_transfers.php:19
 msgid "In eigene Liga"
 msgstr "En tu propia liga"
 
-#: ../../../lig_transfers.php:31
-msgid "Zum Teamprofil"
-msgstr "Mi equipo"
-
-#: ../../../lig_transfers.php:39
+#: ../../../lig_transfers.php:38
 msgid "In alle Ligen"
 msgstr "En todas las ligas"
 
-#: ../../../lig_transfers.php:49
+#: ../../../lig_transfers.php:50
 #, fuzzy
 msgid "Name des Spielers"
 msgstr "Mis jugadores"
 
-#: ../../../lig_transfers.php:50
+#: ../../../lig_transfers.php:51
 msgid "Geschätzte Ablösesumme"
 msgstr "Tasa de transferencia estimada"
 
-#: ../../../lig_transfers.php:50
+#: ../../../lig_transfers.php:51
 #, fuzzy
 msgid "Ablöse ca."
 msgstr "Taza de transferencia"
 
-#: ../../../lig_transfers.php:51
+#: ../../../lig_transfers.php:52
 msgid "Ablösesumme im Verhältnis zum Marktwert"
 msgstr ""
 
-#: ../../../lig_transfers.php:52
+#: ../../../lig_transfers.php:53
 #, fuzzy
 msgid "Altes Team des Spielers"
 msgstr "Jugadores más leales"
 
-#: ../../../lig_transfers.php:52 ../../../spieler_historie.php:28
+#: ../../../lig_transfers.php:53 ../../../spieler_historie.php:27
 #: ../../../stat_ligaTausch.php:14
 msgid "Von"
 msgstr "De"
 
-#: ../../../lig_transfers.php:53
+#: ../../../lig_transfers.php:54
 #, fuzzy
 msgid "Neues Team des Spielers"
 msgstr "Jugadores más leales"
 
-#: ../../../lig_transfers.php:53 ../../../spieler_historie.php:29
+#: ../../../lig_transfers.php:54 ../../../spieler_historie.php:28
 msgid "Zu"
 msgstr "Para"
 
-#: ../../../lig_transfers.php:125
+#: ../../../lig_transfers.php:126
 msgid ""
 "Die Transfers sind nach Datum geordnet, d.h. der letzte Transfer steht ganz "
 "oben. In der Spalte hinter der Ablöse steht, ob die Ablöse über oder unter "
 "dem Marktwert lag."
 msgstr ""
 
-#: ../../../lig_transfers.php:126
+#: ../../../lig_transfers.php:127
 #, fuzzy
 msgid "Leihprämien:"
 msgstr "Préstamo"
 
-#: ../../../lig_transfers.php:126
+#: ../../../lig_transfers.php:127
 msgid ""
 "Bei Leihgaben kannst Du die Höhe der Prämie sehen, indem Du mit der Maus "
 "über das Wort &quot;Leihgabe&quot; fährst."
 msgstr ""
 
-#: ../../../lig_transfers.php:127
+#: ../../../lig_transfers.php:128
 msgid "Tipp:"
 msgstr "Consejo:"
 
-#: ../../../lig_transfers.php:127
+#: ../../../lig_transfers.php:128
 msgid ""
 "Fahre mit der Maus über den Spielernamen, um das Datum mit genauer Uhrzeit "
 "zu sehen."
@@ -3526,7 +3557,7 @@ msgstr "Intercambiar ligas"
 msgid "Kein Wunsch"
 msgstr "Sin preferencias"
 
-#: ../../../ligaTauschWuensche.php:52 ../../../team.php:72
+#: ../../../ligaTauschWuensche.php:52 ../../../team.php:71
 msgid "Land"
 msgstr "País"
 
@@ -3629,7 +3660,7 @@ msgstr "Ninca"
 msgid "keins"
 msgstr ""
 
-#: ../../../manager.php:42 ../../../spieler.php:120 ../../../spieler.php:123
+#: ../../../manager.php:42 ../../../spieler.php:128 ../../../spieler.php:131
 msgid "unbekannt"
 msgstr "desconocido"
 
@@ -3688,8 +3719,8 @@ msgstr ""
 msgid "%s ist zurzeit im Urlaub!"
 msgstr "%s está actualmente de vacaciones!"
 
-#: ../../../manager.php:144 ../../../spielbericht.php:286
-#: ../../../spieler.php:77 ../../../team.php:46 ../../../ver_stadion.php:211
+#: ../../../manager.php:144 ../../../spielbericht.php:285
+#: ../../../spieler.php:85 ../../../team.php:45 ../../../ver_stadion.php:211
 msgid "Wert"
 msgstr "Datos"
 
@@ -3781,11 +3812,6 @@ msgid "Das Gästebuch von %s ist noch leer. Sei der Erste, der sich einträgt!"
 msgstr ""
 "El libro de visitas de %s está vacío. ¡Se la primera persona en escribirle!"
 
-#: ../../../manager.php:281
-#, php-format
-msgid "%1$s schrieb am %2$s:"
-msgstr "%1$s escribió el %2$s:"
-
 #: ../../../manager.php:283 ../../../taktik.php:180
 msgid "Löschen"
 msgstr "Borrar"
@@ -3843,7 +3869,7 @@ msgid "Abgeschlossen"
 msgstr "Cerrado"
 
 #: ../../../manager_der_saison.php:2 ../../../manager_der_saison.php:4
-#: ../../../team.php:118
+#: ../../../team.php:117
 msgid "Manager der Saison"
 msgstr "Mánager del Año"
 
@@ -3880,21 +3906,11 @@ msgstr "Apostado hoy"
 msgid "Jeder Tabellenplatz"
 msgstr "Cualquier posición"
 
-#: ../../../manager_der_saison.php:34
-msgid "1. bis 3."
-msgstr ""
-
-#: ../../../manager_der_saison.php:35
-msgid "4. bis 6."
-msgstr ""
-
-#: ../../../manager_der_saison.php:36
-msgid "7. bis 9."
-msgstr ""
-
-#: ../../../manager_der_saison.php:37
-msgid "10. bis 12."
-msgstr ""
+#: ../../../manager_der_saison.php:34 ../../../manager_der_saison.php:35
+#: ../../../manager_der_saison.php:36 ../../../manager_der_saison.php:37
+#, fuzzy, php-format
+msgid "%1$d. bis %2$d."
+msgstr "%1$d a %2$d años"
 
 #: ../../../manager_der_saison.php:40
 msgid "Jedes Pokal-Ergebnis"
@@ -4497,6 +4513,11 @@ msgstr ""
 msgid "E-Mail-Adresse:"
 msgstr "Dirección de correo electrónico:"
 
+#: ../../../passwort_vergessen.php:115
+#, fuzzy
+msgid "Anfordern"
+msgstr "Cambiar"
+
 #: ../../../pokal.php:2 ../../../pokal.php:66 ../../../pokal.php:242
 msgid "Internationaler Pokal"
 msgstr "Copa Internacional"
@@ -4561,7 +4582,7 @@ msgstr "Escribir mensaje"
 
 #: ../../../post_schreiben.php:7
 msgid "Post geschrieben"
-msgstr ""
+msgstr "Mensaje enviado"
 
 #: ../../../post_schreiben.php:11 ../../../post_schreiben.php:18
 msgid "Dies ist der Text, den Du schreiben wolltest:"
@@ -4576,6 +4597,7 @@ msgid ""
 "Die Post wurde erfolgreich versendet. Eine Kopie wurde in Deinem Postausgang "
 "gespeichert."
 msgstr ""
+"El mensaje ha sido enviado. Una copia se ha guardado en la bandeja de salida."
 
 #: ../../../post_schreiben.php:63
 msgid ""
@@ -5322,217 +5344,197 @@ msgstr ""
 msgid "Spiel läuft"
 msgstr ""
 
-#: ../../../spielbericht.php:117
+#: ../../../spielbericht.php:116
 msgid "Aktualisieren"
 msgstr "Actualizar"
 
-#: ../../../spielbericht.php:261
+#: ../../../spielbericht.php:260
 msgid "Herzlich willkommen im Stadion. Heute findet das Spiel zwischen "
 msgstr "Bienvenidos al estadio. El partido de hoy es entre"
 
-#: ../../../spielbericht.php:290
+#: ../../../spielbericht.php:289
 msgid "Begegnung"
 msgstr "Encuentro"
 
-#: ../../../spielbericht.php:293
+#: ../../../spielbericht.php:292
 msgid "Wettbewerb"
 msgstr "Competicion"
 
-#: ../../../spielbericht.php:294
+#: ../../../spielbericht.php:293
 msgid "Zuschauer"
 msgstr "Público"
 
-#: ../../../spielbericht.php:295
+#: ../../../spielbericht.php:294
 msgid "Tore (Heim)"
 msgstr "Goles (local)"
 
-#: ../../../spielbericht.php:296
+#: ../../../spielbericht.php:295
 msgid "Tore (Auswärts)"
 msgstr "Goles (visitante)"
 
-#: ../../../spielbericht.php:297
+#: ../../../spielbericht.php:296
 msgid "Ballbesitz"
 msgstr "Posesión del balón"
 
-#: ../../../spielbericht.php:298
+#: ../../../spielbericht.php:297
 msgid "Fouls"
 msgstr "Faltas"
 
-#: ../../../spielbericht.php:299
+#: ../../../spielbericht.php:298
 msgid "Abseits"
 msgstr "Posición adelantada"
 
-#: ../../../spielbericht.php:300
+#: ../../../spielbericht.php:299
 msgid "Schüsse"
 msgstr "Remates"
 
-#: ../../../spielbericht.php:301
+#: ../../../spielbericht.php:300
 msgid "Gelb (Heim)"
 msgstr "Tarjetas amarillas (local)"
 
-#: ../../../spielbericht.php:302
+#: ../../../spielbericht.php:301
 msgid "Gelb (Auswärts)"
 msgstr "Tarjetas amarillas (visitante)"
 
-#: ../../../spielbericht.php:303
+#: ../../../spielbericht.php:302
 msgid "Rot (Heim)"
 msgstr "Tarjetas rojas (local)"
 
-#: ../../../spielbericht.php:304
+#: ../../../spielbericht.php:303
 msgid "Rot (Auswärts)"
 msgstr "Tarjetas rojas (visitante)"
 
-#: ../../../spielbericht.php:310
+#: ../../../spielbericht.php:309
 msgid "Kommentar des Reporters"
 msgstr "Relato del periodista"
 
-#: ../../../spielbericht.php:316
+#: ../../../spielbericht.php:315
 msgid "Mögliche RKP-Veränderungen"
 msgstr "Posibles cambios de RKP"
 
-#: ../../../spieler.php:38
+#: ../../../spieler.php:43
 msgid "Spieler:"
 msgstr "Jugador:"
 
-#: ../../../spieler.php:62
+#: ../../../spieler.php:66
 #, php-format
 msgid "Du hast den Spieler erfolgreich für %s € verkauft."
 msgstr ""
 
-#: ../../../spieler.php:66
+#: ../../../spieler.php:72
 msgid "Spieler beobachten"
 msgstr "Observar jugador"
 
-#: ../../../spieler.php:69
+#: ../../../spieler.php:75
 msgid "Beobachtung beenden"
 msgstr "Terminar observación"
 
-#: ../../../spieler.php:71
+#: ../../../spieler.php:79
 msgid "Zur Historie"
 msgstr "Historial de pases"
 
-#: ../../../spieler.php:84 ../../../transfermarkt.php:68
-#: ../../../transfermarkt_leihe.php:34
-msgid "Torwart"
-msgstr "Arquero"
-
-#: ../../../spieler.php:85 ../../../transfermarkt.php:71
-#: ../../../transfermarkt_leihe.php:35
-msgid "Abwehr"
-msgstr "Defensor"
-
-#: ../../../spieler.php:86 ../../../transfermarkt.php:74
-#: ../../../transfermarkt_leihe.php:36
-msgid "Mittelfeld"
-msgstr "Mediocampista"
-
-#: ../../../spieler.php:87 ../../../transfermarkt.php:77
-#: ../../../transfermarkt_leihe.php:37
-msgid "Sturm"
-msgstr "Delantero"
-
-#: ../../../spieler.php:90
+#: ../../../spieler.php:98
 #, php-format
 msgid "%d Jahre"
 msgstr "%d años"
 
-#: ../../../spieler.php:95
+#: ../../../spieler.php:103
 msgid "Frische"
 msgstr "Frescura"
 
-#: ../../../spieler.php:96
+#: ../../../spieler.php:104
 msgid "Moral"
 msgstr "Moral"
 
-#: ../../../spieler.php:97 ../../../stat_wertvollste_spieler.php:49
+#: ../../../spieler.php:105 ../../../stat_wertvollste_spieler.php:49
 #: ../../../stat_wertvollste_teams.php:49
 #: ../../../transfermarkt_auktion.php:146
 msgid "Marktwert"
 msgstr "Valor de mercado"
 
-#: ../../../spieler.php:99 ../../../spieler.php:111
+#: ../../../spieler.php:107 ../../../spieler.php:119
 msgid "Gehalt / Saison"
 msgstr "Sueldo / Temporada"
 
-#: ../../../spieler.php:114 ../../../spieler_historie.php:12
-#: ../../../spieler_historie.php:42
+#: ../../../spieler.php:122 ../../../spieler_historie.php:12
+#: ../../../spieler_historie.php:41
 msgid "außerhalb Europas"
 msgstr "Fuera de Europa"
 
-#: ../../../spieler.php:123 ../../../spieler.php:126
+#: ../../../spieler.php:131 ../../../spieler.php:134
 msgid "Transferstatus"
 msgstr "Estado de transferencia"
 
-#: ../../../spieler.php:136
+#: ../../../spieler.php:144
 #, fuzzy
 msgid "Zur Auktion"
 msgstr "Actividad"
 
-#: ../../../spieler.php:147
+#: ../../../spieler.php:155
 msgid "Spiele für Verein"
 msgstr "Partidos para el club"
 
-#: ../../../spieler.php:148
+#: ../../../spieler.php:156
 msgid "Pflichtspiele (Tore)"
 msgstr "Partidos oficiales (goles)"
 
-#: ../../../spieler.php:151
+#: ../../../spieler.php:159
 msgid "Gesundheit"
 msgstr "Salud"
 
-#: ../../../spieler.php:152
+#: ../../../spieler.php:160
 msgid "Gesund"
 msgstr "Saludable"
 
-#: ../../../spieler.php:154
+#: ../../../spieler.php:162
 #, fuzzy
 msgid "Pokal-Sperre"
 msgstr "Ganadores de Copas Mundiales"
 
-#: ../../../spieler.php:160
+#: ../../../spieler.php:168
 #, fuzzy
 msgid "nach Transfer"
 msgstr "Transferencias"
 
-#: ../../../spieler.php:167
+#: ../../../spieler.php:175
 msgid "Talent"
 msgstr "Talento"
 
-#: ../../../spieler.php:177
+#: ../../../spieler.php:185
 msgid ""
 "Dein Scout glaubt, dass dieser Spieler seinen Höhepunkt bereits erreicht hat."
 msgstr "Tu explorador cree que este jugador ya ha alcanzado su punto máximo."
 
-#: ../../../spieler.php:180
+#: ../../../spieler.php:188
 #, php-format
 msgid ""
 "Dein Scout glaubt, dass dieser Spieler eine Stärke von %s erreichen kann."
 msgstr "Tu explorador cree que este jugador puede llegar a un nivel de %s."
 
-#: ../../../spieler.php:184
+#: ../../../spieler.php:192
 msgid "Vertrag verlängern"
 msgstr "Extender contrato"
 
-#: ../../../spieler.php:187
+#: ../../../spieler.php:195
 msgid "Der Spieler bietet Dir noch keine Vertragsverlängerung an."
 msgstr ""
 
-#: ../../../spieler.php:196
+#: ../../../spieler.php:204
 msgid ""
 "Der Vertrag des Spielers läuft aus, Du kannst ihn deshalb nicht mehr "
 "entlassen"
 msgstr ""
 
-#: ../../../spieler.php:199
+#: ../../../spieler.php:207
 #, php-format
 msgid "Für %s € entlassen"
 msgstr "Despedir por %s €"
 
-#: ../../../spieler.php:209
+#: ../../../spieler.php:217
 msgid "Transfermarkt"
 msgstr "Transferencias"
 
-#: ../../../spieler.php:211
+#: ../../../spieler.php:219
 msgid ""
 "Du kannst diesen Spieler auf dem Transfermarkt verkaufen oder ihn zur "
 "Leihgabe anbieten. Wenn Du ihn zum Verkauf anbietest, wird er direkt gegen "
@@ -5541,62 +5543,62 @@ msgid ""
 "eins davon annimmst."
 msgstr ""
 
-#: ../../../spieler.php:215
+#: ../../../spieler.php:223
 #, php-format
 msgid "Verkauf für %s €"
 msgstr "Vender por %s €"
 
-#: ../../../spieler.php:216
+#: ../../../spieler.php:224
 msgid "Jetzt verkaufen"
 msgstr ""
 
-#: ../../../spieler.php:222
+#: ../../../spieler.php:230
 msgid "zur Leihgabe (ohne Prämie)"
 msgstr ""
 
-#: ../../../spieler.php:223 ../../../spieler.php:224 ../../../spieler.php:225
-#: ../../../spieler.php:226 ../../../spieler.php:227 ../../../spieler.php:228
-#: ../../../spieler.php:229
+#: ../../../spieler.php:231 ../../../spieler.php:232 ../../../spieler.php:233
+#: ../../../spieler.php:234 ../../../spieler.php:235 ../../../spieler.php:236
+#: ../../../spieler.php:237
 #, php-format
 msgid "zur Leihgabe (%s Prämie p.P.)"
 msgstr ""
 
-#: ../../../spieler.php:230
+#: ../../../spieler.php:238
 msgid "Anbieten zur Leihgabe"
 msgstr ""
 
-#: ../../../spieler.php:239
+#: ../../../spieler.php:247
 msgid ""
 "Du bietest diesen Spieler bereits auf dem Transfermarkt an. Du kannst dieses "
 "Angebot aber abbrechen: Möchtest Du das Angebot auf dem Transfermarkt "
 "abbrechen?"
 msgstr ""
 
-#: ../../../spieler.php:242
+#: ../../../spieler.php:250
 msgid "Nein, ich möchte nichts tun."
 msgstr ""
 
-#: ../../../spieler.php:243
+#: ../../../spieler.php:251
 msgid "Ja, ich möchte den Spieler nicht weiter anbieten."
 msgstr ""
 
-#: ../../../spieler.php:245
+#: ../../../spieler.php:253
 msgid "Absenden"
 msgstr ""
 
-#: ../../../spieler.php:252
+#: ../../../spieler.php:260
 #, fuzzy
 msgid "Spieler anbieten"
 msgstr "Horarios de juego"
 
-#: ../../../spieler.php:253
+#: ../../../spieler.php:261
 msgid ""
 "Dein Spieler muss für Deinen Verein mindestens 6 Spiele absolviert haben, "
 "bevor Du ihn verkaufen kannst. Damit Du ihn verleihen kannst, darf er "
 "höchstens 6 Einsätze in der aktuellen Saison haben."
 msgstr ""
 
-#: ../../../spieler.php:254
+#: ../../../spieler.php:262
 msgid ""
 "Spieler, die über 33 Jahre alt sind, können grundsätzlich nicht mehr "
 "verkauft oder verliehen werden."
@@ -5607,35 +5609,35 @@ msgstr ""
 msgid "Spieler-Historie:"
 msgstr "Historial de pases:"
 
-#: ../../../spieler_historie.php:23
+#: ../../../spieler_historie.php:22
 msgid "Zum Spieler-Profil"
 msgstr "Ir al perfil del jugador"
 
-#: ../../../spieler_historie.php:30 ../../../stat_transfer_uebersicht.php:42
+#: ../../../spieler_historie.php:29 ../../../stat_transfer_uebersicht.php:42
 msgid "Ablöse"
 msgstr "Taza de transferencia"
 
-#: ../../../spieler_historie.php:34
+#: ../../../spieler_historie.php:33
 msgid "jetzt"
 msgstr "ahora"
 
-#: ../../../spieler_historie.php:83
+#: ../../../spieler_historie.php:82
 msgid "Jugend"
 msgstr ""
 
-#: ../../../spieler_historie.php:91
+#: ../../../spieler_historie.php:90
 msgid "Letzte Gebote [Sichtbar fürs Team]"
 msgstr "Últimas apuestas [visibles por el Soporte]"
 
-#: ../../../spieler_historie.php:96
+#: ../../../spieler_historie.php:95
 msgid "Bieter-IP"
 msgstr "IP del postor:"
 
-#: ../../../spieler_historie.php:97 ../../../ver_buchungen.php:13
+#: ../../../spieler_historie.php:96 ../../../ver_buchungen.php:13
 msgid "Betrag"
 msgstr "Cantidad"
 
-#: ../../../spieler_historie.php:117
+#: ../../../spieler_historie.php:116
 #, fuzzy
 msgid "Leihe"
 msgstr "Préstamo"
@@ -5788,6 +5790,8 @@ msgid ""
 "Welche Spieler hatten die meisten Einsätze in dieser Saison? Wer ist am "
 "häufigsten für sein Team aufgelaufen?"
 msgstr ""
+"¿Qué jugador tiene la mayor cantidad de apariciones en esta temporada? ¿Que "
+"jugador es más necesario para su equipo?"
 
 #: ../../../stat_dauerbrenner.php:22 ../../../stat_treuesteSpieler.php:36
 msgid "Einsätze"
@@ -5804,6 +5808,9 @@ msgid ""
 "aktuellen Saison. Hinweis: Die Daten können erst nach zwei Spielen angezeigt "
 "werden."
 msgstr ""
+"Este gráfico de líneas muestra el desarrollo de tus resultados en la "
+"temporada actual. Nota: Los datos sólo se pueden visualizar después de dos "
+"partidos."
 
 #: ../../../stat_ergebnisverlauf.php:59 ../../../stat_ergebnisverlauf.php:63
 #: ../../../stat_saisonverlauf.php:36 ../../../stat_saisonverlauf.php:40
@@ -5860,6 +5867,8 @@ msgid ""
 "Zurzeit laufen %s-Spiele. Deshalb kannst Du leider die globale Tabelle nicht "
 "ansehen. Bitte warte, bis die Spiele beendet sind."
 msgstr ""
+"Actualmente hay partidos de %s jugandose. Por lo tanto, no se puede ver la "
+"tabla global. Por favor, espera hasta que el juego haya terminado."
 
 #: ../../../stat_globale_tabelle.php:22
 msgid ""
@@ -6157,6 +6166,8 @@ msgid ""
 "Auf dieser Seite kannst Du Ideen und Fragen eintragen und die Einträge von "
 "anderen Usern bewerten und kommentieren. Vielen Dank für Deine Hilfe!"
 msgstr ""
+"En esta página puedes publicar ideas, preguntas y evaluar las sugerencias y "
+"comentarios de otros usuarios. ¡Gracias por tu ayuda!"
 
 #: ../../../support.php:34
 msgid "Anfragen durchsuchen"
@@ -6177,7 +6188,7 @@ msgstr "Gracias, se ha creado tu tema."
 #: ../../../support.php:100
 #, php-format
 msgid "Aktuelle Anfragen zum Thema &quot;%s&quot;"
-msgstr ""
+msgstr "Últimos temas de &quot;%s&quot;"
 
 #: ../../../support.php:100
 #, fuzzy
@@ -6194,11 +6205,11 @@ msgstr "Todos los temas han sido marcados como leídos."
 
 #: ../../../support.php:116
 msgid "Danke, Dein Kommentar wurde gespeichert."
-msgstr ""
+msgstr "Gracias, tu comentario ha sido guardado."
 
 #: ../../../support.php:119
 msgid "Danke, Dein Kommentar wurde geändert."
-msgstr ""
+msgstr "Gracias, tu comentario ha sido cambiado."
 
 #: ../../../support.php:143
 msgid "Bewertung"
@@ -6236,7 +6247,7 @@ msgstr "Cerrar"
 
 #: ../../../support.php:200
 msgid "Frage / Fehlerbericht"
-msgstr ""
+msgstr "Pregunta / Error"
 
 #: ../../../support.php:204
 #, php-format
@@ -6245,7 +6256,7 @@ msgstr ""
 
 #: ../../../support.php:207
 msgid "Du hast diesen Vorschlag noch nicht bewertet"
-msgstr ""
+msgstr "Aún no has evaluado esta propuesta"
 
 #: ../../../support.php:210
 msgid "Zur Anfrage mit Beschreibung"
@@ -6266,7 +6277,7 @@ msgstr "Me gusta"
 #: ../../../support.php:261
 #, php-format
 msgid "<b>%d</b> insgesamt"
-msgstr ""
+msgstr "<b>%d</b> totales"
 
 #: ../../../support.php:262
 #, php-format
@@ -6276,7 +6287,7 @@ msgstr ""
 #: ../../../support.php:263
 #, php-format
 msgid "<b>%d</b> Stimmen erhalten"
-msgstr ""
+msgstr "<b>%d</b> votos recibidos"
 
 #: ../../../support.php:274
 msgid "Meine letzten Anfragen"
@@ -6304,7 +6315,7 @@ msgstr "El equipo de soporte"
 
 #: ../../../supportAdd.php:34
 msgid "Was für eine Anfrage möchtest Du erstellen?"
-msgstr ""
+msgstr "¿Sobre que temas deseas escribir?"
 
 #: ../../../supportAdd.php:35
 msgid "Frage"
@@ -6324,7 +6335,7 @@ msgstr "Título (máx. 150 caracteres):"
 
 #: ../../../supportAdd.php:40
 msgid "Möchtest Du Deine Anfrage noch genauer beschreiben ... ?"
-msgstr ""
+msgstr "¿Podrías explicar con precisión tu tema?"
 
 #: ../../../supportAdd.php:41
 msgid "Anfrage erstellen"
@@ -6353,17 +6364,19 @@ msgstr "Soporte: Tema #%s"
 
 #: ../../../supportRequest.php:90
 msgid "Hallo"
-msgstr ""
+msgstr "Hola"
 
 #: ../../../supportRequest.php:90
 msgid ""
 "vielen Dank für Deine Beteiligung im Support-Forum. Eine Deiner Anfragen "
 "wurde jetzt geschlossen, Du findest sie hier:"
 msgstr ""
+"gracias por tu participación en el foro de soporte. Una de tus peticiones ya "
+"ha sido cerrada, puedes encontrarla en este link:"
 
 #: ../../../supportRequest.php:90
 msgid "Sportliche Grüße"
-msgstr ""
+msgstr "Un cordial saludo"
 
 #: ../../../supportRequest.php:97
 #, fuzzy
@@ -6372,7 +6385,7 @@ msgstr "¡Tus vacaciones han sido aceptadas!"
 
 #: ../../../supportRequest.php:110
 msgid "Diese Anfrage ist geschützt und nur für das Support-Team sichtbar."
-msgstr ""
+msgstr "Este tema esta protegido y sólo el equipo de soporte puede verlo."
 
 #: ../../../supportRequest.php:113
 msgid "Bei dieser Anfrage handelt es sich um einen gelöschten Eintrag."
@@ -6390,6 +6403,11 @@ msgstr "¡Me gusta!"
 #, fuzzy
 msgid "Schlecht!"
 msgstr "malo"
+
+#: ../../../supportRequest.php:236
+#, fuzzy
+msgid "Anfrage von:"
+msgstr "Solicitar a"
 
 #: ../../../supportRequest.php:246
 msgid "Anonym (Bitte erst oben abstimmen!)"
@@ -6446,6 +6464,10 @@ msgstr "Eliminar comentario"
 #: ../../../supportRequest.php:306 ../../../supportRequest.php:314
 msgid "Guter Kommentar!"
 msgstr "¡Me gusta!"
+
+#: ../../../supportRequest.php:329
+msgid "Wird gesendet ..."
+msgstr "Enviando..."
 
 #: ../../../taktik.php:2 ../../../taktik.php:9 ../../../zz2.php:174
 msgid "Taktik"
@@ -6544,7 +6566,7 @@ msgstr "Largo"
 
 #: ../../../taktik.php:126 ../../../taktik.php:187
 msgid "Chancen-Erarbeitung:"
-msgstr "Tipo de juego:"
+msgstr "Remate:"
 
 #: ../../../taktik.php:128
 msgid "Sicher"
@@ -6704,69 +6726,69 @@ msgstr "Las transferencias de este equipo"
 msgid "Zum Spielplan"
 msgstr "Ver calendario"
 
-#: ../../../team.php:69
+#: ../../../team.php:68
 msgid "Trainer"
 msgstr "Entrenador"
 
-#: ../../../team.php:71
+#: ../../../team.php:70
 msgid "Finanzlage"
 msgstr "Estado financiero"
 
-#: ../../../team.php:73
+#: ../../../team.php:72
 msgid "Liga (Vorjahr)"
 msgstr ""
 
-#: ../../../team.php:74
+#: ../../../team.php:73
 msgid "Pokal (Vorjahr)"
 msgstr ""
 
-#: ../../../team.php:75
+#: ../../../team.php:74
 msgid "Cup (Vorjahr)"
 msgstr ""
 
-#: ../../../team.php:78 ../../../team.php:103
+#: ../../../team.php:77 ../../../team.php:102
 msgid "Meisterschaft"
 msgstr "Copa de Liga"
 
-#: ../../../team.php:79 ../../../team.php:108
+#: ../../../team.php:78 ../../../team.php:107
 msgid "Pokalsieg"
 msgstr "Copas Internacionales"
 
-#: ../../../team.php:80 ../../../team.php:113
+#: ../../../team.php:79 ../../../team.php:112
 msgid "Cupsieg"
 msgstr "Copas Nacionales"
 
-#: ../../../team.php:81
+#: ../../../team.php:80
 msgid "RKP (Vorjahr)"
 msgstr ""
 
-#: ../../../team.php:81
+#: ../../../team.php:80
 #, php-format
 msgid "%1$s (%2$s) Punkte"
 msgstr ""
 
-#: ../../../team.php:83
+#: ../../../team.php:82
 #, php-format
 msgid "%1$s (%2$s Siege)"
 msgstr ""
 
-#: ../../../team.php:85 ../../../ver_finanzen.php:105
+#: ../../../team.php:84 ../../../ver_finanzen.php:105
 #: ../../../ver_stadion.php:2 ../../../ver_stadion.php:315
 #: ../../../zz2.php:195
 msgid "Stadion"
 msgstr "Estadio"
 
-#: ../../../team.php:85 ../../../ver_stadion.php:215
+#: ../../../team.php:84 ../../../ver_stadion.php:215
 #: ../../../ver_stadion.php:285
 #, php-format
 msgid "%s Plätze"
 msgstr "%s plateas"
 
-#: ../../../team.php:100
+#: ../../../team.php:99
 msgid "Trophäen-Raum"
 msgstr "Sala de trofeos"
 
-#: ../../../team.php:187
+#: ../../../team.php:186
 msgid "MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, FR: Frische"
 msgstr "Po: posición, ET: estado de transferencia,  Ed: edad, Fr: frescura"
 
@@ -6796,7 +6818,7 @@ msgstr ""
 msgid "Wünsche nach Testspielen"
 msgstr ""
 
-#: ../../../testspiele.php:11 ../../../transfermarkt_leihe.php:104
+#: ../../../testspiele.php:11 ../../../transfermarkt_leihe.php:110
 msgid "Deine Anfrage wurde zurückgezogen."
 msgstr "Tu solicitud ha sido retirada."
 
@@ -6981,9 +7003,9 @@ msgstr "Buscar en el mercado"
 #: ../../../transfermarkt.php:57
 #, php-format
 msgid "bis %d Jahre"
-msgstr "hastea %d años"
+msgstr "hasta %d años"
 
-#: ../../../transfermarkt.php:65 ../../../transfermarkt_leihe.php:33
+#: ../../../transfermarkt.php:65 ../../../transfermarkt_leihe.php:35
 msgid "Jede Position"
 msgstr "Cualquier posición"
 
@@ -7002,32 +7024,32 @@ msgstr "hasta %d,9 de fuerza"
 msgid "von %d"
 msgstr "desde %d"
 
-#: ../../../transfermarkt.php:163
+#: ../../../transfermarkt.php:162
 #, php-format
 msgid "Du hast den Spieler %1$s fur %2$s € gekauft."
 msgstr ""
 
-#: ../../../transfermarkt.php:166
+#: ../../../transfermarkt.php:165
 #, php-format
 msgid "Du hast den Spieler %1$s fur %2$s € verkauft."
 msgstr ""
 
-#: ../../../transfermarkt.php:191
+#: ../../../transfermarkt.php:190
 msgid "Gebot"
 msgstr "Oferta"
 
-#: ../../../transfermarkt.php:199
+#: ../../../transfermarkt.php:198
 #, fuzzy
 msgid "Zurzeit keine Auktionen!"
 msgstr "Eviar solicitud"
 
-#: ../../../transfermarkt.php:225
+#: ../../../transfermarkt.php:224
 msgid ""
 "Vor dem Höchstgebot steht in eckigen Klammern die Anzahl der abgegebenen "
 "Gebote."
 msgstr ""
 
-#: ../../../transfermarkt.php:226 ../../../transfermarkt_leihe.php:212
+#: ../../../transfermarkt.php:225 ../../../transfermarkt_leihe.php:225
 msgid "MT: Mannschaftsteil, AL: Alter, ST: Stärke"
 msgstr "Po: posición, Ed: edad, Fu: fuerza"
 
@@ -7043,29 +7065,29 @@ msgstr ""
 msgid "Transfermarkt: %s"
 msgstr "Transferencias: %s"
 
-#: ../../../transfermarkt_auktion.php:98 ../../../transfermarkt_leihe.php:62
+#: ../../../transfermarkt_auktion.php:98 ../../../transfermarkt_leihe.php:63
 msgid ""
 "Bist Du wirklich sicher, dass Du schon eine Verstärkung für Dein Team "
 "brauchst?"
 msgstr ""
 
-#: ../../../transfermarkt_auktion.php:99 ../../../transfermarkt_leihe.php:63
+#: ../../../transfermarkt_auktion.php:99 ../../../transfermarkt_leihe.php:64
 msgid ""
 "Der Vorstand empfiehlt Dir, als neuer Trainer in den ersten zwei Stunden auf "
 "Transfers zu verzichten."
 msgstr ""
 
-#: ../../../transfermarkt_auktion.php:100 ../../../transfermarkt_leihe.php:64
+#: ../../../transfermarkt_auktion.php:100 ../../../transfermarkt_leihe.php:65
 #, fuzzy
 msgid "Deinen Kader"
 msgstr "Planteles más jóvenes"
 
-#: ../../../transfermarkt_auktion.php:100 ../../../transfermarkt_leihe.php:64
+#: ../../../transfermarkt_auktion.php:100 ../../../transfermarkt_leihe.php:65
 #, fuzzy
 msgid "Mannschaft"
 msgstr "Posiciones:"
 
-#: ../../../transfermarkt_auktion.php:100 ../../../transfermarkt_leihe.php:64
+#: ../../../transfermarkt_auktion.php:100 ../../../transfermarkt_leihe.php:65
 #, php-format
 msgid ""
 "Du solltest Dir zuerst einmal %1$s ansehen und versuchen, eine erste %2$s "
@@ -7127,26 +7149,27 @@ msgstr "Hacer oferta"
 msgid "Du bist zurzeit der Höchstbietende!"
 msgstr "¡Tu eres el mejor postor!"
 
-#: ../../../transfermarkt_auktion.php:177
+#: ../../../transfermarkt_auktion.php:178
 msgid ""
 "Der Verein, der die höchste Ablösesumme bietet, bekommt den Spieler "
 "automatisch nach Auktionsende. Der Vertrag wird dann erst einmal für 29 Tage "
 "mit dem angegebenen Gehalt abgeschlossen."
 msgstr ""
 
-#: ../../../transfermarkt_auktion.php:177
+#: ../../../transfermarkt_auktion.php:178
+#, fuzzy, php-format
 msgid ""
-"Jedes Gebot verlängert die Laufzeit der Auktion um 1 Minute, damit andere "
+"Jedes Gebot verlängert die Laufzeit der Auktion um %d Minuten, damit andere "
 "Manager noch die Chance haben, mehr zu bieten."
 msgstr ""
 "Cada oferta aumenta la duración de la subasta por 1 minuto, para que otros "
 "mánagers tengan la oportunidad de ofrecer más."
 
-#: ../../../transfermarkt_auktion.php:179
+#: ../../../transfermarkt_auktion.php:180
 msgid "Dein Maximalgebot"
 msgstr "Tu máxima oferta "
 
-#: ../../../transfermarkt_auktion.php:180
+#: ../../../transfermarkt_auktion.php:181
 #, php-format
 msgid ""
 "Wenn Du neu im Spiel bist, kannst Du nur bis 125% des Marktwertes bieten. "
@@ -7156,62 +7179,62 @@ msgid ""
 "vom Marktwert eines Spielers."
 msgstr ""
 
-#: ../../../transfermarkt_auktion.php:181
+#: ../../../transfermarkt_auktion.php:182
 #, php-format
 msgid "Im Moment liegt Deine persönliche Grenze bei %s des Marktwertes."
 msgstr "Por el momento, tu límite personal es %s del valor de mercado."
 
-#: ../../../transfermarkt_leihe.php:2 ../../../transfermarkt_leihe.php:57
+#: ../../../transfermarkt_leihe.php:2 ../../../transfermarkt_leihe.php:59
 msgid "Transfermarkt | Ausleihen"
 msgstr "Transferencias | Alquiler"
 
-#: ../../../transfermarkt_leihe.php:19
+#: ../../../transfermarkt_leihe.php:21
 msgid "Jedes Alter"
 msgstr "Cualquier edad"
 
-#: ../../../transfermarkt_leihe.php:20 ../../../transfermarkt_leihe.php:21
 #: ../../../transfermarkt_leihe.php:22 ../../../transfermarkt_leihe.php:23
 #: ../../../transfermarkt_leihe.php:24 ../../../transfermarkt_leihe.php:25
 #: ../../../transfermarkt_leihe.php:26 ../../../transfermarkt_leihe.php:27
 #: ../../../transfermarkt_leihe.php:28 ../../../transfermarkt_leihe.php:29
-#: ../../../transfermarkt_leihe.php:30
+#: ../../../transfermarkt_leihe.php:30 ../../../transfermarkt_leihe.php:31
+#: ../../../transfermarkt_leihe.php:32
 #, php-format
 msgid "%1$d bis %2$d Jahre"
 msgstr "%1$d a %2$d años"
 
-#: ../../../transfermarkt_leihe.php:40
+#: ../../../transfermarkt_leihe.php:42
 msgid "Jede Stärke"
 msgstr "Cualquier fuerza"
 
-#: ../../../transfermarkt_leihe.php:41 ../../../transfermarkt_leihe.php:42
-#: ../../../transfermarkt_leihe.php:43
+#: ../../../transfermarkt_leihe.php:43 ../../../transfermarkt_leihe.php:44
+#: ../../../transfermarkt_leihe.php:45
 #, php-format
 msgid "Stärke %1$d bis %2$d"
 msgstr "Fuerza de %1$d a %2$d"
 
-#: ../../../transfermarkt_leihe.php:44 ../../../transfermarkt_leihe.php:45
 #: ../../../transfermarkt_leihe.php:46 ../../../transfermarkt_leihe.php:47
 #: ../../../transfermarkt_leihe.php:48 ../../../transfermarkt_leihe.php:49
 #: ../../../transfermarkt_leihe.php:50 ../../../transfermarkt_leihe.php:51
 #: ../../../transfermarkt_leihe.php:52 ../../../transfermarkt_leihe.php:53
+#: ../../../transfermarkt_leihe.php:54 ../../../transfermarkt_leihe.php:55
 #, php-format
 msgid "Stärke %d"
 msgstr "Fuerza %d"
 
-#: ../../../transfermarkt_leihe.php:90
+#: ../../../transfermarkt_leihe.php:96
 msgid "Du kannst den Spieler nicht ausleihen: 2-Transfers-Sperre"
 msgstr ""
 
-#: ../../../transfermarkt_leihe.php:97
+#: ../../../transfermarkt_leihe.php:103
 #, fuzzy
 msgid "Deine Anfrage für diesen Spieler wurde gesendet."
 msgstr "¡Tus vacaciones han sido aceptadas!"
 
-#: ../../../transfermarkt_leihe.php:163
+#: ../../../transfermarkt_leihe.php:173
 msgid "Zurzeit keine Angebote!"
 msgstr "¡Actualmente no hay ofertas!"
 
-#: ../../../transfermarkt_leihe.php:211
+#: ../../../transfermarkt_leihe.php:224
 msgid ""
 "Indem Du auf &quot;Anfragen&quot; klickst, schickst Du dem Besitzer des "
 "Spielers ein Angebot, den Spieler bis Saisonende zu übernehmen. Der Besitzer "
@@ -7514,6 +7537,24 @@ msgstr ""
 "Sólo puedes reemplazar un asistente cada 22 días. Así que hay que debes "
 "esperar hasta el %s."
 
+#: ../../../ver_personal.php:188 ../../../ver_personal.php:189
+#: ../../../ver_personal.php:190 ../../../ver_personal.php:191
+#: ../../../ver_personal.php:192 ../../../ver_personal.php:233
+#: ../../../ver_personal.php:234 ../../../ver_personal.php:235
+#: ../../../ver_personal.php:236 ../../../ver_personal.php:237
+#: ../../../ver_personal.php:278 ../../../ver_personal.php:279
+#: ../../../ver_personal.php:280 ../../../ver_personal.php:281
+#: ../../../ver_personal.php:282
+#, fuzzy, php-format
+msgid "Stufe %1$d (%2$s € pro Saison)"
+msgstr "%1$d fechas con %2$s € de sueldo por Temporada"
+
+#: ../../../ver_personal.php:193 ../../../ver_personal.php:238
+#: ../../../ver_personal.php:283 ../../../ver_stadion.php:256
+#: ../../../ver_stadion.php:303
+msgid "Ändern"
+msgstr "Cambiar"
+
 #: ../../../ver_personal.php:200
 msgid ""
 "Je höher die Stufe für die Kompetenz des Fanbetreuers ist, desto wohler "
@@ -7705,10 +7746,6 @@ msgstr "Costos del estadio"
 #: ../../../ver_stadion.php:220
 msgid "Zuschauer beim letzten Spiel"
 msgstr "Espectadores en el último partido"
-
-#: ../../../ver_stadion.php:256 ../../../ver_stadion.php:303
-msgid "Ändern"
-msgstr "Cambiar"
 
 #: ../../../ver_stadion.php:258
 msgid "Umbau"
@@ -7905,7 +7942,7 @@ msgstr "¿Quién esta conectado?"
 msgid "Aktiv"
 msgstr "Activo"
 
-#: ../../../wio.php:31
+#: ../../../wio.php:31 ../../../wio.php:50
 msgid "Post schicken"
 msgstr "Enviar mensaje"
 

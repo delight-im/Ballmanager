@@ -35,7 +35,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	if ($rowCounter % 2 != 0) { $html .= ' class="odd"'; }
 	$html .= '>';
 	$html .= '<td>'.showErfolg($sql3['done']).'</td>';
-	$html .= '<td>['.sprintf('%1$02d', $rowCounter+1).'] '.$sql3['task'].'</td></tr>';
+	$html .= '<td>['.sprintf('%1$02d', $rowCounter+1).'] '._($sql3['task']).'</td></tr>';
 	$rowCounter++;
 }
 $html .= '</tbody></table>';

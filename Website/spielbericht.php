@@ -229,6 +229,41 @@ if ($ber2a > 0) {
         else {
             $minute_str = $ber3['minute'].'\': ';
         }
+        // ----- MATCH TRANSLATION STARTS -----
+        $translated = "";
+	$ausgabe2 = "";
+	if (strpos($ber3['kommentar'],'@') !== false) {
+		$str = explode(".",$ber3['kommentar']);
+		foreach($str as $key=>$sentence) {
+			if (strpos($sentence,'@') !== false) {
+				$str2 = explode(" ",$sentence);
+				foreach($str2 as $word) {
+					if (strpos($word,'@') !== false) {
+						$team_name = $word;
+					}
+				}
+				$ausgabe = str_replace( $team_name, 'XYZ', $sentence);
+				$ausgabe .= '.';
+			} else if (strpos($sentence,'[') !== true) {
+				$ausgabe = ltrim($sentence);
+				$ausgabe .= '.';
+			}
+			if ($key > 0) {
+				$ausgabe = _($ausgabe);
+				$ausgabe2 .= " ".$ausgabe;
+				$translated .= $ausgabe2;
+				$ausgabe2 = "";
+			} else {
+				$translated .= _($ausgabe);
+			}
+			$translated = str_replace( 'XYZ', substr($team_name, 1) , $translated);
+			$translated = str_replace('&',' ',$translated);
+		}
+		$ber3['kommentar'] = substr($translated, 0, -1);
+	} else {
+		$ber3['kommentar'] = _($ber3['kommentar']);
+	}
+	// ----- MATCH TRANSLATION ENDS -----
         $kommentar_ergebnis = extract_kommentar_ergebnis($ber3['kommentar']);
 		$kommentar_ergebnisStr = trim($kommentar_ergebnis[0]);
 		if (mb_substr($kommentar_ergebnisStr, 0, 9, 'UTF-8') == 'Noten für' OR mb_substr($kommentar_ergebnisStr, 0, 23, 'UTF-8') == '<strong>Die Zeitschrift') {

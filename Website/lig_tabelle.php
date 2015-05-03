@@ -83,7 +83,7 @@ if (isset($_POST['nachricht']) && isset($_POST['liga']) && $loggedin == 1 && $co
     while ($shsj3 = mysql_fetch_assoc($shsj2)) {
         echo '<option value="'.$shsj3['ids'].'"';
         if ($shsj3['ids'] == $temp_liga) { echo ' selected="selected"'; }
-        echo '>'.$shsj3['name'].'</option>';
+        echo '>'._($shsj3['name']).'</option>';
     }
     ?>
 </select>

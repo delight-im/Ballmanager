@@ -29,7 +29,6 @@ if (isset($_POST['auswahl']) && $cookie_id != CONFIG_DEMO_USER) {
 ?>
 <p style="text-align:right;"><a class="pagenava" href="/posteingang.php"><?php echo _('Posteingang'); ?></a> <a class="pagenava aktiv" href="/postausgang.php"><?php echo _('Postausgang'); ?></a></p>
 <form action="/postausgang.php" name="checkBoxForm" method="post" accept-charset="utf-8">
-<p>
 <table>
 <thead>
 <tr class="odd">

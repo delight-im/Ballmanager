@@ -68,24 +68,22 @@ $spieltagDescription = array(	4 => array(_('Pokal: Vorrunde (Hinspiel)'), _('Cup
 );
 $sql1 = "SELECT id, datum, team1, team2, ergebnis, typ FROM ".$prefix."spiele WHERE (team1 = '".$chosenTeam."' OR team2 = '".$chosenTeam."')".$filterSQL." ORDER BY datum ASC";
 $sql2 = mysql_query($sql1);
-$counter = 1;
 $lastDate = '';
 $currentSpieltag = 1;
 while ($sql3 = mysql_fetch_assoc($sql2)) {
-	if ($counter % 2 == 1) { echo '<tr>'; } else { echo '<tr class="odd">'; }
 	$currentDate = date('d.m.Y', getTimestamp('-1 hour', $sql3['datum']));
 	if ($currentDate == $lastDate) { // nächstes Spiel an gleichem Tag
+		echo '<tr>';
 		echo '<td>&nbsp;</td>';
 	}
 	else { // neuer Tag
+		echo '<tr class="odd">';
 		$currentSpieltag = GameTime::getMatchDay()-round((time()-$sql3['datum'])/86400);
 		echo '<td style="font-weight:bold;">'.$currentDate.'</td>';
 		echo '<td colspan="3" style="font-weight:bold;">'.__('Spieltag %d', $currentSpieltag).'</td></tr><tr><td>&nbsp;</td>'; // Zeile mit Spieltag einschieben
-		$counter++; // Zeilen-Counter erhöhen
 		if (isset($spieltagDescription[$currentSpieltag]) && is_array($spieltagDescription[$currentSpieltag])) { // Zeile mit Spieltags-Beschreibung einschieben
             foreach ($spieltagDescription[$currentSpieltag] as $special_date) {
                 echo '<td colspan="3" style="font-weight:bold;">'.$special_date.'</td></tr><tr><td>&nbsp;</td>';
-                $counter++; // Zeilen-Counter erhöhen
             }
 		}
 	}
@@ -106,7 +104,6 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 	echo '<a href="/team.php?id='.$sql6.'">'.$gegner.'</a></td><td class="link"><a href="/spielbericht.php?id='.$sql3['id'].'">'.$ergebnis_live.' '.$zusatz.'</a></td>';
 	echo '</tr>';
 	$lastDate = $currentDate;
-	$counter++;
 }
 ?>
 </tbody>

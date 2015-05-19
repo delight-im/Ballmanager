@@ -193,7 +193,9 @@ if ($_SESSION['last_ligaTausch_check'] < $vor3Minuten) {
 </ul>
 </div>
 <div id="content-wrap">
-<?php if ($loggedin == 1) { ?>
+<?php if ($loggedin == 1 && $_SESSION['via_android'] == 0) { ?>
+<script>var margin = 0; function ScrollMenu(left) { margin = margin + left; var nav = document.getElementById('nav'); nav.style.marginLeft = margin + 'px'; } </script>
+<div id="sidebar-expander"><span style="width:100%;" onClick="ScrollMenu(-50);"><?php echo _('<- slide menu'); ?></span><span style="width:100%;" onClick="ScrollMenu(50);"><?php echo _('slide menu ->'); ?></span></div>
 <div id="sidebar-expander" onclick="(function (self) { var sidebar = document.getElementById('sidebar'); self.style.display = 'none'; sidebar.style.display = 'block'; })(this);"><span><?php echo _('Seitenleiste ausklappen'); ?></span></div>
 <?php } ?>
 <?php if ($loggedin == 0) { ?>

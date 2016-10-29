@@ -1,7 +1,7 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php if ($loggedin == 1) { exit; } ?>
 <title><?php echo _('Passwort vergessen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php
 $showPasswordResetForm = true;
 $timeout = getTimestamp('-5 hours');
@@ -75,7 +75,7 @@ $nachricht .= '
 '.$aip;
 }
 if (CONFIG_EMAIL_PHP_MAILER) {
-	require './phpmailer/PHPMailerAutoload.php';
+	require_once(__DIR__.'/phpmailer/PHPMailerAutoload.php');
 	$mail = new PHPMailer(); // create a new object
 	$mail->CharSet = CONFIG_EMAIL_CHARSET;
 	$mail->IsSMTP();
@@ -115,4 +115,4 @@ else{
 <p><input type="submit" value="<?php echo _('Anfordern'); ?>" /></p>
 </form>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,18 +1,18 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Freunde einladen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Freunde einladen'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <p><strong><?php echo _('Deine Freunde sind noch nicht dabei?').'</strong><br />'._('Dann nutze den folgenden Link, um sie einzuladen.').'</p><p>'._('Wenn sie sich nach Deiner Empfehlung über den Link registrieren, bekommt <strong>ihr beide</strong> jeweils <strong>7,5 Mio.</strong> als Prämie aufs Vereinskonto:'); ?></p>
-<p style="display:block; width:360px; margin:0 auto; padding:2px 4px; background-color:#00f; color:#fff;"><a target="_blank" style="color:#fff;" href="http://<?php echo CONFIG_SITE_DOMAIN; ?>/?r=<?php echo $cookie_id; ?>"><?php echo CONFIG_SITE_DOMAIN; ?>/?r=<?php echo $cookie_id; ?></a></p>
+<p style="display:block; width:360px; margin:0 auto; padding:2px 4px; background-color:#00f; color:#fff;"><a target="_blank" style="color:#fff;" href="http://<?php echo CONFIG_SITE_DOMAIN; ?>/index.php?r=<?php echo $cookie_id; ?>"><?php echo CONFIG_SITE_DOMAIN; ?>/index.php?r=<?php echo $cookie_id; ?></a></p>
 <p>
-    <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://'.CONFIG_SITE_DOMAIN.'/?r='.$cookie_id); ?>">
+    <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode('http://'.CONFIG_SITE_DOMAIN.'/index.php?r='.$cookie_id); ?>">
         <img alt="Facebook" src="/images/brands/facebook-32.png" width="32" />
     </a>
-    <a target="_blank" title="Twitter" href="https://twitter.com/share?url=<?php echo urlencode('http://'.CONFIG_SITE_DOMAIN.'/?r='.$cookie_id); ?>">
+    <a target="_blank" title="Twitter" href="https://twitter.com/share?url=<?php echo urlencode('http://'.CONFIG_SITE_DOMAIN.'/index.php?r='.$cookie_id); ?>">
         <img alt="Twitter" src="/images/brands/twitter-32.png" width="32" />
     </a>
-    <a target="_blank" title="Google Plus" href="https://plus.google.com/share?url=<?php echo urlencode('http://'.CONFIG_SITE_DOMAIN.'/?r='.$cookie_id); ?>">
+    <a target="_blank" title="Google Plus" href="https://plus.google.com/share?url=<?php echo urlencode('http://'.CONFIG_SITE_DOMAIN.'/index.php?r='.$cookie_id); ?>">
         <img alt="Google Plus" src="/images/brands/google-plus-32.png" width="32" />
     </a>
 </p>
@@ -57,4 +57,4 @@ else {
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

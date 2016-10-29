@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Stadion'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
 
@@ -123,7 +123,7 @@ if (isset($_POST['preis']) && $cookie_id != CONFIG_DEMO_USER) {
 	}
 }
 
-require_once('./classes/StadiumBuildings.php');
+require_once(__DIR__.'/classes/StadiumBuildings.php');
 
 if (isset($_POST['umfeld_bearbeiten']) && $cookie_id != CONFIG_DEMO_USER) {
     $stadiumSeats1 = "SELECT plaetze FROM ".$prefix."stadien WHERE team = '".$cookie_team."'";
@@ -315,4 +315,4 @@ if (isset($selectedStadionPhoto)) {
 <h1><?php echo _('Stadion'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Post schreiben'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 
 <?php
 if (isset($_POST['titel']) && isset($_POST['inhalt']) && isset($_POST['an']) && isset($_POST['in_reply_to']) && isset($_POST['secHash']) && $cookie_id != CONFIG_DEMO_USER) {
@@ -64,7 +64,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		}
 	}
 	echo '</p>';
-	include 'zz3.php';
+	include_once(__DIR__.'/zz3.php');
 	exit;
 }
 elseif (isset($_GET['id'])) {
@@ -83,7 +83,7 @@ elseif (isset($_GET['id'])) {
 				$chatSperreBis = $sql3['MAX(chatSperre)'];
 				if ($chatSperreBis > 0 && $chatSperreBis > time()) {
 					addInfoBox('Du bist noch bis zum '.date('d.m.Y H:i', $chatSperreBis).' Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das <a class="inText" href="/wio.php">Support-Team.</a>');
-					include 'zz3.php';
+					include_once(__DIR__.'/zz3.php');
 					exit;
 				}
 			}
@@ -138,4 +138,4 @@ elseif (isset($_GET['id'])) {
 }
 ?>
 
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

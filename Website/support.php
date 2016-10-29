@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Support'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
@@ -10,7 +10,7 @@
 }
 -->
 </style>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
 // CHAT-SPERREN ANFANG
@@ -21,14 +21,18 @@ if (mysql_num_rows($blockCom2) > 0) {
 	$chatSperreBis = $blockCom3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
 		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team.').'</a>'));
-		include 'zz3.php';
+		include_once(__DIR__.'/zz3.php');
 		exit;
 	}
 }
 // CHAT-SPERREN ENDE
 ?>
 <h1><?php echo _('Unser Support-Bereich'); ?></h1>
-<p style="text-align:right"><a href="/support.php?mark=read" class="pagenava" onclick="return confirm('<?php echo _('Bist Du sicher?'); ?>')"><?php echo _('Alle als gelesen markieren'); ?></a> <a href="/support.php" class="pagenava"><?php echo _('Support-Hauptseite'); ?></a> <a href="/supportAdd.php" class="pagenava"><?php echo _('Neue Anfrage'); ?></a></p>
+<p style="text-align:right">
+    <a href="/support.php?mark=read" class="pagenava" onclick="return confirm('<?php echo _('Bist Du sicher?'); ?>')"><?php echo _('Alle als gelesen markieren'); ?></a> 
+    <a href="/support.php" class="pagenava"><?php echo _('Support-Hauptseite'); ?></a> 
+    <a href="/supportAdd.php" class="pagenava"><?php echo _('Neue Anfrage'); ?></a>
+</p>
 <p><?php echo _('Du hast Vorschläge, wie wir das Spiel besser gestalten können? Du hast noch Fragen zum Spiel oder Du hast einen Fehler gefunden?'); ?></p>
 <p><?php echo _('Auf dieser Seite kannst Du Ideen und Fragen eintragen und die Einträge von anderen Usern bewerten und kommentieren. Vielen Dank für Deine Hilfe!'); ?></p>
 <h1><?php echo _('Anfragen durchsuchen'); ?></h1>
@@ -196,10 +200,11 @@ else {
 		}
 		else {
 			echo '<td>';
-			if ($sql3['category'] != 'Vorschlag') {
+                        if ($sql3['category'] == 'Update') {
+				echo '<span>Update</span>';
+			} else if ($sql3['category'] != 'Vorschlag') {
 				echo '<img src="/images/balken/50.png" alt="Frage/Fehlerbericht" title="'._('Frage / Fehlerbericht').'" />';
-			}
-			elseif (isset($listVoted[$sql3['id']])) {
+			} else if (isset($listVoted[$sql3['id']])) {
 				$pVotes = round($sql3['pro']/($sql3['pro']+$sql3['contra'])*100);
 				echo '<img src="/images/balken/'.$pVotes.'.png" alt="'.$pVotes.'%" title="'.__('%d%% sind für diesen Vorschlag', $pVotes).'" />';
 			}
@@ -282,4 +287,4 @@ if (mysql_num_rows($myRequests2) > 0) {
 <h1><?php echo _('Support'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Dauerbrenner'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
@@ -7,8 +7,8 @@
 }
 -->
 </style>
-<?php include 'zz2.php'; ?>
-<?php include 'zzsubnav_statistik.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
+<?php include_once(__DIR__.'/zzsubnav_statistik.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <h1><?php echo _('Dauerbrenner'); ?></h1>
 <p><?php echo _('Welche Spieler hatten die meisten Einsätze in dieser Saison? Wer ist am häufigsten für sein Team aufgelaufen?'); ?></p>
@@ -64,4 +64,4 @@ $tmp_liga_cache = '';
 <h1><?php echo _('Dauerbrenner'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

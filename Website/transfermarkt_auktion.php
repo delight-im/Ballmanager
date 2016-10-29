@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php
 if (!isset($_GET['id'])) {
 	exit;
@@ -88,7 +88,7 @@ function stepGebot(type) {
 }
 -->
 </style>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1>Transfermarkt: <?php echo $spieler_name; ?></h1>
 <p style="text-align:right"><a href="/transfermarkt_auktion.php?id=<?php echo $ids; ?>" onclick="window.location.reload(); return false" class="pagenava"><?php echo _('Seite aktualisieren'); ?></a></p>
 <?php if ($loggedin == 1) { ?>
@@ -98,14 +98,14 @@ if ($_SESSION['pMaxGebot'] == 0) {
 	echo '<p>'._('Bist Du wirklich sicher, dass Du schon eine Verstärkung für Dein Team brauchst?').'</p>';
 	echo '<p>'._('Der Vorstand empfiehlt Dir, als neuer Trainer in den ersten zwei Stunden auf Transfers zu verzichten.').'</p>';
 	echo '<p>'.__('Du solltest Dir zuerst einmal %1$s ansehen und versuchen, eine erste %2$s daraus zu formen.', '<a href="/kader.php">'._('Deinen Kader').'</a>', '<a href="/aufstellung.php">'._('Mannschaft').'</a>').'</p>';
-	include 'zz3.php';
+	include_once(__DIR__.'/zz3.php');
 	exit;
 }
 // AM ANFANG NOCH KEINE TRANSFERS ENDE
 // TRANSFER-SPERREN ANFANG
 if ($_SESSION['transferGesperrt'] == TRUE) {
 	addInfoBox(__('Du bist noch für den Transfermarkt %1$s. Wenn Dir unklar ist, warum, frage bitte ein %2$s.', '<a class="inText" href="/sanktionen.php">'._('gesperrt').'</a>', '<a class="inText" href="/post_schreiben.php?id='.CONFIG_OFFICIAL_USER.'">'._('Team-Mitglied').'</a>'));
-	include 'zz3.php';
+	include_once(__DIR__.'/zz3.php');
 	exit;
 }
 // TRANSFER-SPERREN ENDE
@@ -174,7 +174,7 @@ if ($sql3['bieter_highest'] == $cookie_team) {
 }
 echo '</tbody>';
 echo '</table></p>';
-require_once('./classes/TransferMarket.php');
+require_once(__DIR__.'/classes/TransferMarket.php');
 echo '<p><strong>'._('Hinweis:').'</strong> '._('Der Verein, der die höchste Ablösesumme bietet, bekommt den Spieler automatisch nach Auktionsende. Der Vertrag wird dann erst einmal für 29 Tage mit dem angegebenen Gehalt abgeschlossen.').'</p><p>'.__('Jedes Gebot verlängert die Laufzeit der Auktion um %d Minuten, damit andere Manager noch die Chance haben, mehr zu bieten.', TransferMarket::AUCTION_TIME_EXTENSION_ON_BID).'</p>';
 ?>
 <h1><?php echo _('Dein Maximalgebot'); ?></h1>
@@ -183,4 +183,4 @@ echo '<p><strong>'._('Hinweis:').'</strong> '._('Der Verein, der die höchste Ab
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

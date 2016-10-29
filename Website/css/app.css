@@ -1,0 +1,255 @@
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+.os-trikot-number {
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+    line-height: 40px;
+    width: 95%;
+    margin: auto;
+    font-family: Arial sans-serif;
+}
+
+.os-player-placeholder {
+    border-style: dashed;
+    border-color: #717171;
+    width: 40px;
+}
+.os-player-dialog-backdrop {
+    background-color: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1000;
+}
+.os-player-dialog {
+    width: 300px;
+    max-height: 80%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: black;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.os-player-dialog-header {
+    background-color: #4277cc;
+    color: white;
+    padding: 10px;
+    font-size: 22px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.os-dialog-card {
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+}
+.os-dialog-card > div {
+    text-align: left;
+}
+.os-dialog-card:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+.os-dialog-player-active {
+    background-color: #7eba3c;
+}
+.os-dialog-player-activeO {
+    background-color: #c9d05c;
+}
+.os-lineup-field {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 522px;
+    height: 400px;
+    margin: 0 auto;
+    background-image: url(../images/fussballfeld.png);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    color: #fff;
+    font-weight: bold;
+    z-index: 1;
+}
+.os-lineup-player {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+}
+.os-trikot-container {
+    width: 40px;
+    position: relative;
+    margin: auto;
+}
+.os-trikot-container > img {
+    width: 100%;
+}
+.os-lineup-player-name {
+    white-space: nowrap;
+    color: #444444;
+    font-size: 9px;
+}
+.os-lineup-player.os-lineup-player-goalkeeper {
+    left: 242px;
+    top: 340px;
+}
+.os-lineup-player.os-lineup-player-defender1 {
+    left: 36px;
+    top: 245px;
+}
+.os-lineup-player.os-lineup-player-defender2 {
+    left: 136px;
+    top: 270px;
+}
+.os-lineup-player.os-lineup-player-defender3 {
+    left: 242px;
+    top: 270px;
+}
+.os-lineup-player.os-lineup-player-defender4 {
+    left: 350px;
+    top: 270px;
+}
+.os-lineup-player.os-lineup-player-defender5 {
+    left: 440px;
+    top: 245px;
+}
+.os-lineup-player.os-lineup-player-midfield1 {
+    left: 50px;
+    top: 120px;
+}
+.os-lineup-player.os-lineup-player-midfield2 {
+    left: 162px;
+    top: 140px;
+}
+.os-lineup-player.os-lineup-player-midfield3 {
+    left: 242px;
+    top: 140px;
+}
+.os-lineup-player.os-lineup-player-midfield4 {
+    left: 322px;
+    top: 140px;
+}
+.os-lineup-player.os-lineup-player-midfield5 {
+    left: 432px;
+    top: 120px;
+}
+.os-lineup-player.os-lineup-player-midfieldO {
+    left: 242px;
+    top: 70px;
+}
+.os-lineup-player.os-lineup-player-midfieldD {
+    left: 242px;
+    top: 200px;
+}
+.os-lineup-player.os-lineup-player-forward1 {
+    left: 172px;
+    top: 15px;
+}
+.os-lineup-player.os-lineup-player-forward2 {
+    left: 242px;
+    top: 15px;
+}
+.os-lineup-player.os-lineup-player-forward3 {
+    left: 312px;
+    top: 15px;
+}
+
+@media (max-width: 879px) {
+    .os-lineup-player.os-lineup-player-goalkeeper {
+        left: 155px;
+        top: 345px;
+    }
+    .os-lineup-player.os-lineup-player-defender1 {
+        left: 25px;
+        top: 245px;
+    }
+    .os-lineup-player.os-lineup-player-defender2 {
+        left: 90px;
+        top: 270px;
+    }
+    .os-lineup-player.os-lineup-player-defender3 {
+        left: 155px;
+        top: 270px;
+    }
+    .os-lineup-player.os-lineup-player-defender4 {
+        left: 220px;
+        top: 270px;
+    }
+    .os-lineup-player.os-lineup-player-defender5 {
+        left: 288px;
+        top: 245px;
+    }
+    .os-lineup-player.os-lineup-player-midfield1 {
+        left: 25px;
+        top: 120px;
+    }
+    .os-lineup-player.os-lineup-player-midfield2 {
+        left: 90px;
+        top: 140px;
+    }
+    .os-lineup-player.os-lineup-player-midfield3 {
+        left: 155px;
+        top: 140px;
+    }
+    .os-lineup-player.os-lineup-player-midfield4 {
+        left: 220px;
+        top: 140px;
+    }
+    .os-lineup-player.os-lineup-player-midfield5 {
+        left: 288px;
+        top: 120px;
+    }
+    .os-lineup-player.os-lineup-player-midfieldO {
+        left: 155px;
+        top: 70px;
+    }
+    .os-lineup-player.os-lineup-player-midfieldD {
+        left: 155px;
+        top: 200px;
+    }
+    .os-lineup-player.os-lineup-player-forward1 {
+        left: 90px;
+        top: 15px;
+    }
+    .os-lineup-player.os-lineup-player-forward2 {
+        left: 155px;
+        top: 15px;
+    }
+    .os-lineup-player.os-lineup-player-forward3 {
+        left: 220px;
+        top: 15px;
+    }
+}

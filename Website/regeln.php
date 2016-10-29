@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Regeln'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php
 if ($loggedin == 1) {
 	if (isset($_POST['acceptedRules'])) {
@@ -87,6 +87,14 @@ if ($loggedin == 1) {
 <li><?php echo _('Diese Webseite (und auch jeder Teil davon) darf ausschließlich mit Webbrowsern aufgerufen werden. Die Verwendung von anderen Programmen ist nicht gestattet.'); ?></li>
 <li><?php echo __('%s behält sich vor, diese Regeln jederzeit ändern zu können.', CONFIG_SITE_NAME); ?></li>
 </ol>
+<p><strong><?php echo _('Teil VI: Wappen'); ?></strong></p>
+<ol>
+<li><?php echo _('Wappen auf denen eine politische Richtung zu erkennen ist, sind verboten.'); ?></li>
+<li><?php echo _('Wappen auf denen Marken oder Warenzeichen zu sehen sind, sind verboten.'); ?></li>
+<li><?php echo _('Menschenverachtende Zeichen und Symbole sind verboten'); ?></li>
+<li><?php echo _('Es besteht kein Anspruch auf die Freigabe eines Wappens, wenn sich das Supportteam unsicher ist.'); ?></li>
+<li><?php echo _('Das OpenSoccer-Team behält sich vor Wappen nachträglich zu löschen, und/oder die Regeln diesbezüglich zu ändern.'); ?></li>
+</ol>
 <h1 id="datenschutz"><?php echo _('Datenschutz'); ?></h1>
 <p><strong><?php echo _('Keine Weitergabe der Daten:'); ?></strong><br />
 <?php echo __('Die Betreiber der Webseite unter %1$s (&quot;%2$s&quot;) geben grundsätzlich keine Daten von Benutzern an Dritte weiter. Ausnahmen sind Fälle, in denen %2$s gesetzlich oder durch Entscheidungen von Gerichten dazu verpflichtet ist, und Fälle, in denen die Daten zur Strafverfolgung benötigt werden.', CONFIG_SITE_DOMAIN, CONFIG_SITE_NAME); ?></p>
@@ -131,4 +139,4 @@ if ($loggedin == 1) {
 <li><a href="http://de.wikipedia.org/wiki/User_Agent">User-Agent-Header</a></li>
 <li><a href="http://de.wikipedia.org/wiki/IP-Adresse">IP-Adresse</a></li>
 </ul>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 // NUR MAXIMAL 2500 FREIE SPIELER ANFANG
 $cn1 = "SELECT COUNT(*) FROM ".$prefix."transfermarkt WHERE besitzer = 'KEINER'";
 $cn2 = mysql_query($cn1);

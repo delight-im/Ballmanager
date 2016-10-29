@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php
 if (isset($_GET['delQuote']) && isset($_GET['delQuoteHash'])) {
 	$delQuote = bigintval($_GET['delQuote']);
@@ -37,7 +37,7 @@ if ($sql5a == 0) { exit; }
 $sql6 = mysql_fetch_assoc($sql5);
 ?>
 <title><?php echo $sql6['titel']; ?> | Forum - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo $sql6['titel']; ?> | Forum</h1>
 <?php
 if ($loggedin == 1) {
@@ -129,4 +129,4 @@ echo '</div>';
 <?php } else { ?>
 <p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

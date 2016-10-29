@@ -1,7 +1,7 @@
 <?php
 if (!isset($_GET['id'])) { exit; }
-include 'zzserver.php';
-include 'zzcookie.php';
+include_once(__DIR__.'/zzserver.php');
+include_once(__DIR__.'/zzcookie.php');
 $spieler = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 $sql1 = "SELECT gehalt, vertrag, jugendTeam, team FROM ".$prefix."spieler WHERE ids = '".$spieler."' AND team = '".$cookie_team."' AND leiher = 'keiner'";
 $sql2 = mysql_query($sql1);

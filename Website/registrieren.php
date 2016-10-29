@@ -1,8 +1,8 @@
 <?php if (!isset($_POST['reg_benutzername']) OR !isset($_POST['reg_email'])) { exit; } ?>
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php if ($loggedin == 1) { exit; } ?>
 <title><?php echo _('Registrierung - Daten prüfen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Registrierung - Daten prüfen'); ?></h1>
 <?php
 function validEmail($email) {
@@ -93,4 +93,4 @@ else {
 <p><?php echo _('Du kannst die Registrierung an dieser Stelle noch abbrechen. Deine Daten wurden noch nicht gespeichert.'); ?></p>
 </form>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,7 +1,7 @@
 <?php
 if (!isset($_GET['id']) OR !isset($_GET['datum'])) { exit; }
-include 'zzserver.php';
-include 'zzcookie.php';
+include_once(__DIR__.'/zzserver.php');
+include_once(__DIR__.'/zzcookie.php');
 $team = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
 if ($cookie_id != CONFIG_DEMO_USER) {
 	$datum = bigintval($_GET['datum']);

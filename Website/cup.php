@@ -1,6 +1,9 @@
-<?php include 'zz1.php'; ?>
+<?php 
+include_once(__DIR__.'/zz1.php'); 
+require_once(__DIR__.'/controller/emblemController.php');
+?>
 <title><?php echo _('Nationaler Cup'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <h1><?php echo _('Land wählen'); ?></h1>
 <form action="" method="get" accept-charset="utf-8">
@@ -45,7 +48,7 @@ if (file_exists($tmp_dateiname)) {
 			$ersatz_temp = '<strong>'.$cookie_teamname.'</strong>';
 			echo str_replace($cookie_teamname, $ersatz_temp, $tmp_liga_cache);
             $temp = TRUE;
-            include 'zz3.php';
+            include_once(__DIR__.'/zz3.php');
             exit;
 		}
 	}
@@ -118,7 +121,7 @@ for ($i = 1; $i <= 6; $i++) {
 	$tmp_liga_cache .= '<h1>'.$spiels['key'].'</h1>';
 	$tmp_liga_cache .= '<p><table><thead><tr class="odd"><th scope="col">'._('Team 1').'</th><th scope="col">'._('Team 2').'</th><th scope="col">&nbsp;</th></tr></thead><tbody>';
 	foreach ($spielliste as $spiel) {
-		$tmp_liga_cache .= '<tr><td>['.substr((isset($ligaID2ligaName[$team2liga[$spiel['team1']]]) ? $ligaID2ligaName[$team2liga[$spiel['team1']]] : ' '), -1).'] <a href="/team.php?id='.$team_ids[$spiel['team1']].'">'.$spiel['team1'].'</a></td><td>['.substr((isset($ligaID2ligaName[$team2liga[$spiel['team2']]]) ? $ligaID2ligaName[$team2liga[$spiel['team2']]] : ' '), -1).'] <a href="/team.php?id='.$team_ids[$spiel['team2']].'">'.$spiel['team2'].'</a></td><td>'.$spiel['ergebnis'].'</td></tr>';
+		$tmp_liga_cache .= '<tr><td>['.substr((isset($ligaID2ligaName[$team2liga[$spiel['team1']]]) ? $ligaID2ligaName[$team2liga[$spiel['team1']]] : ' '), -1).'] <a href="/team.php?id='.$team_ids[$spiel['team1']].'"><img class="emblem-small" src="/images/emblems/'.EmblemController::getEmblemByTeamIds($team_ids[$spiel['team1']]).'" />'.$spiel['team1'].'</a></td><td>['.substr((isset($ligaID2ligaName[$team2liga[$spiel['team2']]]) ? $ligaID2ligaName[$team2liga[$spiel['team2']]] : ' '), -1).'] <a href="/team.php?id='.$team_ids[$spiel['team2']].'"><img class="emblem-small" src="/images/emblems/'.EmblemController::getEmblemByTeamIds($team_ids[$spiel['team2']]).'" />'.$spiel['team2'].'</a></td><td>'.$spiel['ergebnis'].'</td></tr>';
 	}
 	$tmp_liga_cache .= '</tbody></table></p>';
 }
@@ -136,4 +139,4 @@ echo str_replace($cookie_teamname, $ersatz_temp, $tmp_liga_cache);
 <h1><?php echo _('Nationaler Cup'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

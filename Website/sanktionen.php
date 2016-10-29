@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo ((isset($_SESSION['status']) && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) ? 'Kontrollzentrum' : 'Sanktionen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
 // ANTRAEGE ANFANG
@@ -63,7 +63,7 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 							$betreff = CONFIG_SITE_NAME.': News vom '.dayAndMonth();
 							$nachricht = "Lieber Manager,\n\n".$bodyText."\n\nWir wünschen Dir noch viel Spaß beim Managen!\n\nSportliche Grüße\n".CONFIG_SITE_NAME."\n".CONFIG_SITE_DOMAIN."\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf ".CONFIG_SITE_DOMAIN." mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter ".CONFIG_SITE_EMAIL;
 							if (CONFIG_EMAIL_PHP_MAILER) {
-								require './phpmailer/PHPMailerAutoload.php';
+								require_once(__DIR__.'/phpmailer/PHPMailerAutoload.php');
 								$mail = new PHPMailer(); // create a new object
 								$mail->CharSet= CONFIG_EMAIL_CHARSET;
 								$mail->IsSMTP();
@@ -502,4 +502,4 @@ if ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin') {
 <h1>Sanktionen</h1>
 <p>Du musst angemeldet sein, um diese Seite aufrufen zu können!</p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,7 +1,7 @@
 <?php if (isset($_GET['id'])) { ?>
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Post'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 
 <?php if ($loggedin == 0) { echo '<h1>'._('Post').'</h1><p>'._('Du musst angemeldet sein, um diese Seite aufrufen zu können!').'</p>'; } else { ?>
 <?php
@@ -44,4 +44,4 @@ if ($sql3['in_reply_to'] != '') {
 }
 ?>
 
-<?php include 'zz3.php'; } ?>
+<?php include_once(__DIR__.'/zz3.php'); } ?>

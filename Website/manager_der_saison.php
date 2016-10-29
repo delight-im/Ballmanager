@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Manager der Saison'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Manager der Saison'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <p><?php echo _('Am 1. und 2. Spieltag jeder Saison wählen die Manager aus allen Ligen den &quot;Manager der Saison&quot;. Wer hat Deiner Meinung nach den Titel
@@ -207,4 +207,4 @@ else {
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

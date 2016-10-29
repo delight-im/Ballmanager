@@ -1,5 +1,8 @@
 <?php if (!isset($_GET['id'])) { exit; } ?>
-<?php include 'zz1.php'; ?>
+<?php 
+include_once(__DIR__.'/zz1.php'); 
+require_once 'controller/emblemController.php';
+?>
 <?php
 function extract_kommentar_ergebnis($kommentar) {
     	$ergebnis_str = '';
@@ -109,7 +112,7 @@ div.matchReport span.teamRight {
 }
 -->
 </style>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php
 if ($live_scoring_meldung != '') {
     $scoreStr = _('LIVE');
@@ -124,13 +127,13 @@ else {
 	$score2 = $scores[1];
 }
 echo '<div class="matchReport">';
-	echo '<span class="team teamLeft">'.$sql3['team1'].'</span>';
+	echo '<span class="team teamLeft"><img class="emblem-small" src="/images/emblems/'.EmblemController::getEmblemByTeamIds($tid1).'" />'.$sql3['team1'].'</span>';
 	echo '<div class="scores">';
 		echo '<span class="score">'.$score1.'</span>';
 		echo '<span class="score">'.$score2.'</span>';
 		echo '<div style="clear:both;"></div>';
 	echo '</div>';
-	echo '<span class="team teamRight">'.$sql3['team2'].'</span>';
+	echo '<span class="team teamRight">'.$sql3['team2'].'<img class="emblem-small" src="/images/emblems/'.EmblemController::getEmblemByTeamIds($tid2).'" /></span>';
 echo '</div>';
 echo '<img src="'.$selectedStadionPhoto[1].'" alt="'._('Dein Stadion').'" title="'._('Dein Stadion').'" style="display:block; width:540px; height:auto; border:0; margin:10px auto; max-width:100%;" />';
 ?>
@@ -355,4 +358,4 @@ if (isset($selectedStadionPhoto)) {
 	}
 }
 ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Tipps des Tages'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <h1><?php echo _('Tipps durchsuchen'); ?></h1>
 <form action="/tipps_des_tages.php" method="get" accept-charset="utf-8">
@@ -39,4 +39,4 @@ foreach ($tippList as $tippEntry) {
 <h1><?php echo _('Tipps des Tages'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

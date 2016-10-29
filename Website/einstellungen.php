@@ -1,8 +1,9 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Einstellungen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
+require_once(__DIR__.'/controller/teamController.php');
 if (isset($_POST['accDelPlus']) && isset($_POST['accDelMinus']) && $cookie_id != CONFIG_DEMO_USER) {
 	$accDelPlus = mysql_real_escape_string(trim(strip_tags($_POST['accDelPlus'])));
 	$accDelMinus = mysql_real_escape_string(trim(strip_tags($_POST['accDelMinus'])));
@@ -40,6 +41,7 @@ if (isset($_POST['accDelPlus']) && isset($_POST['accDelMinus']) && $cookie_id !=
 		$wielange1 = "INSERT INTO ".$prefix."abmeldungen (zeit, username, liga, dabei, ip) VALUES (".time().", '".$cookie_username."', '".$cookie_liga."', ".intval(time()-$howLong3['regdate']).", '".getUserIP()."')";
 		$wielange2 = mysql_query($wielange1);
 	}
+        TeamController::resetTeam($cookie_team, $cookie_liga);
 	header('Location: /logout.php');
 	exit;
 }
@@ -264,4 +266,4 @@ for ($i = $start_urlaub; $i <= $noch_urlaub; $i++) {
 <h1><?php echo _('Einstellungen'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

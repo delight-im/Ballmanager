@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 $hundert_prozent = 60000000; // 100% entsprechen 60.000.000 Euro
 $ex1 = "SELECT COUNT(*) FROM ".$prefix."teams WHERE tv_ein = 0";
 $ex2 = mysql_query($ex1);

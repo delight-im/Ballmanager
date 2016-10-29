@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Namensänderung'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
 <?php
@@ -48,8 +48,8 @@ else {
 }
 if ($letzteAenderungVor < $changeLockDuration) { // check time limit for team name changing lock
 	$lastTeamNameChange = round($letzteAenderungVor / $changeLockUnit);
-	addInfoBox(__('Der Name Deines Vereins wurde zuletzt vor %1$d %2$d geändert. Du kannst ihn in %3$d %4$d das nächste Mal ändern.', $lastTeamNameChange, $changeLockUnitStr, intval(30-$lastTeamNameChange), $changeLockUnitStr));
-	include 'zz3.php';
+	addInfoBox(__('Der Name Deines Vereins wurde zuletzt vor %1$d %2$s geändert. Du kannst ihn in %3$d %4$s das nächste Mal ändern.', $lastTeamNameChange, $changeLockUnitStr, intval(30-$lastTeamNameChange), $changeLockUnitStr));
+	include_once(__DIR__.'/zz3.php');
 	exit;
 }
 // CHECK IF USER IS ALLOWED TO CHANGE TEAM NAME AGAIN END
@@ -167,4 +167,4 @@ foreach ($kuerzelListe as $kuerzel) {
 <h1><?php echo _('Namensänderung'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Liga-Tausch'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Liga-Tausch'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <p style="text-align:right"><a href="/ligaTauschWuensche.php" class="pagenava"><?php echo _('Tausch-Wünsche'); ?></a></p>
@@ -22,17 +22,17 @@ $sperre3 = mysql_result($sperre2, 0);
 $daysToWait = 45-round((time()-$sperre3)/86400);
 if ($daysToWait > 0) {
 	echo '<p><strong>'.__('Du musst noch %d Tage warten, bis Du wieder die Liga wechseln kannst.', $daysToWait).'</strong></p>';
-	include 'zz3.php';
+	include_once(__DIR__.'/zz3.php');
 	exit;
 }
 elseif (GameTime::getMatchDay() > 5) {
 	echo '<p><strong>'._('Der Verband erlaubt einen Liga-Tausch nur an den ersten fünf Spieltagen. Bitte warte bis zur nächsten Saison.').'</strong></p>';
-	include 'zz3.php';
+	include_once(__DIR__.'/zz3.php');
 	exit;
 }
 elseif ($live_scoring_spieltyp_laeuft != '') {
 	echo '<p><strong>'.__('Zurzeit laufen %s-Spiele. Deshalb kannst Du leider keine Liga-Wechsel durchführen. Bitte warte, bis die Spiele beendet sind.', $live_scoring_spieltyp_laeuft).'</strong></p>';
-	include 'zz3.php';
+	include_once(__DIR__.'/zz3.php');
 	exit;
 }
 else {
@@ -144,7 +144,7 @@ else {
                         $sql1 = "INSERT INTO ".$prefix."ligaChanges (user2, team2, user1, team1, zeit, newLiga1, newLiga2) VALUES ('".$otherManager3['ids']."', '".$newTeam."', '".$cookie_id."', '".$cookie_team."', ".time().", '".mysql_real_escape_string($daten2['liga'])."', '".mysql_real_escape_string($daten1['liga'])."')";
                         $sql2 = mysql_query($sql1);
                         addInfoBox(_('Die Anfrage wurde angenommen, eure Ligen wurden getauscht.'));
-                        include 'zz3.php';
+                        include_once(__DIR__.'/zz3.php');
                         exit;
                     }
 				}
@@ -207,4 +207,4 @@ else {
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

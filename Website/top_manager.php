@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Rangliste'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php if ($loggedin == 1) { ?>
 <style type="text/css">
@@ -15,7 +15,7 @@ if (isset($_GET['land'])) {
 	$filter_land = htmlspecialchars(trim(strip_tags($_GET['land'])));
 }
 ?>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Rangliste'); ?><?php if ($filter_land != '') { echo ' für '.$filter_land; } ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -114,4 +114,4 @@ echo '</div>';
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!') ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

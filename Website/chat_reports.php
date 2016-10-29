@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Chat-Reports'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
@@ -11,7 +11,7 @@ td.sperrRelevant_0 {
 -->
 </style>
 
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
 if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
@@ -100,4 +100,4 @@ if ($_SESSION['status'] == 'Helfer' OR $_SESSION['status'] == 'Admin') {
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

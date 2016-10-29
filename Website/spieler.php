@@ -1,7 +1,7 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php
 if (!isset($_GET['id'])) { exit; }
-$sql1 = "SELECT id, ids, vorname, nachname, vertrag, position, wiealt, moral, staerke, talent, frische, marktwert, verhandlungsbasis, gehalt, transfermarkt, team, leiher, spiele_verein, spiele, tore, verletzung, jugendTeam, pokalNurFuer FROM ".$prefix."spieler WHERE ".$prefix."spieler.ids = '".mysql_real_escape_string($_GET['id'])."'";
+$sql1 = "SELECT id, ids, vorname, nachname, vertrag, position, wiealt, moral, staerke, talent, frische, marktwert, verhandlungsbasis, gehalt, transfermarkt, team, leiher, spiele_verein, spiele, spiele_saison, tore, verletzung, jugendTeam, pokalNurFuer FROM ".$prefix."spieler WHERE ".$prefix."spieler.ids = '".mysql_real_escape_string($_GET['id'])."'";
 $sql2 = mysql_query($sql1);
 $sql2a = mysql_num_rows($sql2);
 if ($sql2a == 0) { exit; }
@@ -53,7 +53,7 @@ else {
 }
 -->
 </style>
-<?php include 'zz2.php';
+<?php include_once(__DIR__.'/zz2.php');
 echo '<h1>'.__('Spieler: %1$s %2$s', $sql3['vorname'], $sql3['nachname']).'</h1>';
 if (isset($_GET['action'])) {
 	if ($_GET['action'] == 'setWatching') {
@@ -152,13 +152,14 @@ else {
 	echo '</td></tr>';
 }
 echo '<tr class="odd"><td>'._('Spiele für Verein').'</td><td>'.$sql3['spiele_verein'].'</td></tr>';
-echo '<tr><td>'._('Pflichtspiele (Tore)').'</td><td>'.$sql3['spiele'].' (';
+echo '<tr><td>'._('Pflichtspieltore').'</td><td>';
 if ($live_scoring_spieltyp_laeuft == '') { echo $sql3['tore']; } else { echo '?'; }
-echo ')</td></tr>';
-echo '<tr class="odd"><td>'._('Gesundheit').'</td><td>';
+echo '</td></tr>';
+echo '<tr class="odd"><td>'._('Pflichtspiele (Spiele diese Saison)').'</td><td>'.$sql3['spiele'].' ('.$sql3['spiele_saison'].')</td></tr>';
+echo '<tr><td>'._('Gesundheit').'</td><td>';
 if ($sql3['verletzung'] == 0) { echo _('Gesund'); } else { echo '<span style="color:red">Verletzt ('.$sql3['verletzung'].' Tag'; if ($sql3['verletzung'] > 1) { echo 'e'; } echo ')</span>'; }
 echo '</td></tr>';
-echo '<tr><td>'._('Pokal-Sperre').'</td><td>';
+echo '<tr class="odd"><td>'._('Pokal-Sperre').'</td><td>';
 if ($sql3['pokalNurFuer'] == '') {
 	echo _('Nein');
 }
@@ -171,7 +172,7 @@ else {
 	}
 }
 echo '</td></tr>';
-echo '<tr class="odd"><td>'._('Talent').'</td><td>';
+echo '<tr><td>'._('Talent').'</td><td>';
 $talentStars = round($schaetzungVomScout/9.9*5);
 for ($stars_full = 1; $stars_full <= $talentStars; $stars_full++) {
 	echo '<img src="/images/stern.png" alt="+" width="16" />';
@@ -181,17 +182,17 @@ for ($stars_empty = ($talentStars+1); $stars_empty <= 5; $stars_empty++) {
 }
 echo '</td></tr>';
 if ($schaetzungVomScout <= $sql3['staerke']) {
-	echo '<tr><td colspan="2">'._('Dein Scout glaubt, dass dieser Spieler seinen Höhepunkt bereits erreicht hat.').'</td></tr>';
+	echo '<tr class="odd"><td colspan="2">'._('Dein Scout glaubt, dass dieser Spieler seinen Höhepunkt bereits erreicht hat.').'</td></tr>';
 }
 else {
-	echo '<tr><td colspan="2">'.__('Dein Scout glaubt, dass dieser Spieler eine Stärke von %s erreichen kann.', number_format($schaetzungVomScout, 1, ',', '.')).'</td></tr>';
+	echo '<tr class="odd"><td colspan="2">'.__('Dein Scout glaubt, dass dieser Spieler eine Stärke von %s erreichen kann.', number_format($schaetzungVomScout, 1, ',', '.')).'</td></tr>';
 }
 if ($loggedin == 1 && $sql3['team'] == $cookie_team && $sql3['leiher'] == 'keiner') {
 	if ($sql3['marktwert'] > 0) {
-		echo '<tr class="odd"><td colspan="2" class="link"><a href="/vertrag_verlaengern.php?id='.$sql3['ids'].'">'._('Vertrag verlängern').'</a></td></tr>';
+		echo '<tr><td colspan="2" class="link"><a href="/vertrag_verlaengern.php?id='.$sql3['ids'].'">'._('Vertrag verlängern').'</a></td></tr>';
 	}
 	else {
-		echo '<tr class="odd"><td colspan="2">'._('Der Spieler bietet Dir noch keine Vertragsverlängerung an.').'</td></tr>';
+		echo '<tr><td colspan="2">'._('Der Spieler bietet Dir noch keine Vertragsverlängerung an.').'</td></tr>';
 	}
 	if ($sql3['jugendTeam'] == $sql3['team'] && $sql3['gehalt'] % 100000 == 0) {
 		$entlassungskosten = 0; // Jugendspieler umsonst entlassen
@@ -200,10 +201,10 @@ if ($loggedin == 1 && $sql3['team'] == $cookie_team && $sql3['leiher'] == 'keine
 		$entlassungskosten = $sql3['gehalt']*ceil(($sql3['vertrag']-time())/86400/22)/2;
 	}
 	if ($sql3['vertrag'] < getTimestamp('+48 hours')) {
-		echo '<tr><td colspan="2">'._('Der Vertrag des Spielers läuft aus, Du kannst ihn deshalb nicht mehr entlassen').'</td></tr>';
+		echo '<tr class="odd"><td colspan="2">'._('Der Vertrag des Spielers läuft aus, Du kannst ihn deshalb nicht mehr entlassen').'</td></tr>';
 	}
 	else {
-		echo '<tr><td colspan="2" class="link"><a href="/spieler_entlassen.php?id='.$sql3['ids'].'" onclick="return confirm(\''._('Bist Du sicher?').'\')">'.__('Für %s € entlassen', number_format($entlassungskosten, 0, ',', '.')).'</a></td></tr>';
+		echo '<tr class="odd"><td colspan="2" class="link"><a href="/spieler_entlassen.php?id='.$sql3['ids'].'" onclick="return confirm(\''._('Bist Du sicher?').'\')">'.__('Für %s € entlassen', number_format($entlassungskosten, 0, ',', '.')).'</a></td></tr>';
 	}
 }
 ?>
@@ -262,4 +263,4 @@ if ($loggedin == 1 && $sql3['team'] == $cookie_team && $sql3['leiher'] == 'keine
 	}
 }
 ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

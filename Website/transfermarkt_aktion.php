@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php
 if (isset($_POST['spieler'])) {
 	$spieler_id = mysql_real_escape_string(trim(strip_tags($_POST['spieler'])));

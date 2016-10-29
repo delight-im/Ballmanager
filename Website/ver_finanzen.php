@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Finanzen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Finanzen'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <p><?php echo _('Hier im Finanz-Bereich findest Du eine Bilanz für die aktuelle Saison. Durch Transfers, Austausch von Personal und Stadionausbau kann die Prognose vom tatsächlichen Saisonergebnis abweichen.'); ?></p>
@@ -119,4 +119,4 @@ function showSymbolIcon($which) {
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

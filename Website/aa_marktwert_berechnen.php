@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 $getCount1 = "SELECT COUNT(*) FROM ".$prefix."spieler WHERE marktwert = 0 AND wiealt < 14600";
 $getCount2 = mysql_query($getCount1);
 $getCount3 = mysql_result($getCount2, 0);

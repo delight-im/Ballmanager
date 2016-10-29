@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 if ($live_scoring_spieltyp_laeuft != '') { exit; }
 $sql1 = "SELECT id, teamID, verwendungszweck, betrag FROM ".$prefix."buchungenBuffer WHERE ausfuehren < ".time()." LIMIT 0, 80";
 $sql2 = mysql_query($sql1);

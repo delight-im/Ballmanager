@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 if (GameTime::getMatchDay() < 2 OR GameTime::getMatchDay() > 21) { exit; }
 if (date('H', time()) == 18 OR date('H', time()) == 19) { exit; } // Live-Spiele
 $plan1 = "SELECT COUNT(*) FROM ".$prefix."spiele WHERE typ = 'Pokal' AND simuliert = 0";

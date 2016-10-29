@@ -1,9 +1,9 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Testspiele'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
-require_once('./classes/Friendlies.php');
+require_once(__DIR__.'/classes/Friendlies.php');
 if (isset($_GET['recall']) && $cookie_id != CONFIG_DEMO_USER) {
 	$recall_team2 = mysql_real_escape_string(trim(strip_tags($_GET['recall'])));
 	$anfa = "DELETE FROM ".$prefix."testspiel_anfragen WHERE team1 = '".$cookie_team."' AND team2 = '".$recall_team2."'";
@@ -166,4 +166,4 @@ else {
 <h1><?php echo _('Testspiele'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,4 +1,7 @@
-<?php include 'zz1.php'; ?>
+<?php 
+include_once(__DIR__.'/zz1.php');
+require_once(__DIR__.'/controller/emblemController.php');
+?>
 <title><?php echo _('Internationaler Pokal'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php
 // LAENDER HOLEN ANFANG
@@ -23,7 +26,7 @@ if (isset($laender[$cookie_liga])) {
 	echo '</style>';
 }
 ?>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('pokal_standings');
@@ -36,7 +39,7 @@ if (isset($_POST['nachricht']) && $cookie_id != CONFIG_DEMO_USER) {
 		$chatSperreBis = $sql3['MAX(chatSperre)'];
 		if ($chatSperreBis > 0 && $chatSperreBis > time()) {
 			addInfoBox(__('Du bist noch bis zum %1$d für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team.').'</a>'));
-			include 'zz3.php';
+			include_once(__DIR__.'/zz3.php');
 			exit;
 		}
 	}
@@ -84,7 +87,7 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 }
 ?>			
 			<?php
-            include 'zz3.php';
+            include_once(__DIR__.'/zz3.php');
             exit;
 		}
 	}
@@ -173,7 +176,7 @@ for ($i = 1; $i <= 6; $i++) {
 	$tmp_liga_cache .= '<h1>'.$spiels['key'].'</h1>';
 	$tmp_liga_cache .= '<p><table><thead><tr class="odd"><th scope="col">'._('Team 1').'</th><th scope="col">&nbsp;</th><th scope="col">'._('Team 2').'</th><th scope="col">&nbsp;</th><th scope="col">'._('H').'</th><th scope="col">'._('R').'</th></tr></thead><tbody>';
 	foreach ($spielliste as $spiel) {
-		$tmp_liga_cache .= '<tr class="land_'.$laender[$team_ids[$spiel['team1']][1]].' land_'.$laender[$team_ids[$spiel['team2']][1]].'"><td class="link"><a href="/team.php?id='.$team_ids[$spiel['team1']][0].'">'.$spiel['team1'].'</a></td><td><img src="/images/flaggen/'.$laender[$team_ids[$spiel['team1']][1]].'.png" alt="" /></td><td class="link"><a href="/team.php?id='.$team_ids[$spiel['team2']][0].'">'.$spiel['team2'].'</a></td><td><img src="/images/flaggen/'.$laender[$team_ids[$spiel['team2']][1]].'.png" alt="" /></td><td class="link">'.$spiel['ergebnis1'].'</td><td class="link">'.$spiel['ergebnis2'].'</td></tr>';
+		$tmp_liga_cache .= '<tr class="land_'.$laender[$team_ids[$spiel['team1']][1]].' land_'.$laender[$team_ids[$spiel['team2']][1]].'"><td class="link"><a href="/team.php?id='.$team_ids[$spiel['team1']][0].'"><img class="emblem-small" src="/images/emblems/'.EmblemController::getEmblemByTeamIds($team_ids[$spiel['team1']][0]).'" />'.$spiel['team1'].'</a></td><td><img src="/images/flaggen/'.$laender[$team_ids[$spiel['team1']][1]].'.png" alt="" /></td><td class="link"><a href="/team.php?id='.$team_ids[$spiel['team2']][0].'"><img class="emblem-small" src="/images/emblems/'.EmblemController::getEmblemByTeamIds($team_ids[$spiel['team2']][0]).'" />'.$spiel['team2'].'</a></td><td><img src="/images/flaggen/'.$laender[$team_ids[$spiel['team2']][1]].'.png" alt="" /></td><td class="link">'.$spiel['ergebnis1'].'</td><td class="link">'.$spiel['ergebnis2'].'</td></tr>';
 	}
 	$tmp_liga_cache .= '</tbody></table></p>';
 	$tmp_liga_cache .= '<p><strong>'._('Hinweis:').'</strong> '._('Spiele mit Beteiligung aus dem eigenen Land werden grau hinterlegt.').'</p>';
@@ -225,4 +228,4 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 <h1><?php echo _('Internationaler Pokal'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

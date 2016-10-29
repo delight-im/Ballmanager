@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Treueste Spieler'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
@@ -7,8 +7,8 @@
 }
 -->
 </style>
-<?php include 'zz2.php'; ?>
-<?php include 'zzsubnav_statistik.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
+<?php include_once(__DIR__.'/zzsubnav_statistik.php'); ?>
 <h1><?php echo _('Treueste Spieler'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <?php
@@ -76,4 +76,4 @@ $tmp_liga_cache = '';
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

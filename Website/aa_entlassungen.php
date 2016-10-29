@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 set_time_limit(300);
 $datum = date('Y-m-d', time());
 $timeout1 = getTimestamp('-6 days');
@@ -55,7 +55,7 @@ else {
 	$betreff = CONFIG_SITE_NAME.': Keine Lust mehr?';
 	$nachricht = "Hallo ".$sql3['username'].",\n\nDu hast Dich nun schon eine Weile nicht mehr blicken lassen. Am ".date('d.m.Y', $sql3['last_login'])." wurdest Du zuletzt auf dem Trainingsgelände gesehen. Deine Spieler fühlen sich schon etwas vernachlässigt.\n\nAnsonsten wird sich der Vorstand nach einem Nachfolger umsehen und in 3 Tagen einen neuen Manager für Deinen Klub präsentieren.\n\nWenn Du noch Lust hast weiterzuspielen, bist Du natürlich jederzeit herzlich willkommen!\n\nSportliche Grüße\n".CONFIG_SITE_NAME."\n".CONFIG_SITE_DOMAIN."\n\n------------------------------\n\nDu erhältst diese E-Mail, weil Du Dich auf ".CONFIG_SITE_DOMAIN." mit dieser Adresse registriert hast. Du kannst Deinen Account jederzeit löschen, nachdem Du Dich eingeloggt hast, sodass Du anschließend keine E-Mails mehr von uns bekommst. Bei Missbrauch Deiner E-Mail-Adresse meldest Du Dich bitte per E-Mail unter ".CONFIG_SITE_EMAIL;
 	if (CONFIG_EMAIL_PHP_MAILER) {
-		require './phpmailer/PHPMailerAutoload.php';
+		require_once(__DIR__.'/phpmailer/PHPMailerAutoload.php');
 		$mail = new PHPMailer(); // create a new object
 		$mail->CharSet= CONFIG_EMAIL_CHARSET;
 		$mail->IsSMTP();

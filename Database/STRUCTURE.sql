@@ -181,6 +181,20 @@ CREATE TABLE `man_compensations` (
   KEY `zeit` (`zeit`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
+CREATE TABLE `man_computer_monitoring` (
+  `date` date NOT NULL,
+  `team` varchar(45) NOT NULL,
+  `anz_player` tinyint(1) NOT NULL,
+  `anz_player_t` tinyint(1) NOT NULL,
+  `anz_player_s` tinyint(1) NOT NULL,
+  `anz_player_m` tinyint(1) NOT NULL,
+  `anz_player_a` tinyint(1) NOT NULL,
+  `avg_talent` double NOT NULL,
+  `avg_staerke` double NOT NULL,
+  `avg_aufstellung` double NOT NULL,
+  PRIMARY KEY (`date`,`team`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 CREATE TABLE `man_cronjobs` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `datei` varchar(255) NOT NULL,
@@ -193,13 +207,20 @@ CREATE TABLE `man_cronjobs` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 CREATE TABLE `man_cupsieger` (
-  `saison` tinyint(1) NOT NULL,
+  `saison` int(11) NOT NULL,
   `land` varchar(255) NOT NULL,
   `sieger` varchar(255) NOT NULL,
   `finalgegner` varchar(255) NOT NULL,
   PRIMARY KEY (`saison`,`land`),
   KEY `sieger` (`sieger`),
   KEY `finalgegner` (`finalgegner`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE man_emblems (
+  `team` varchar(32) NOT NULL,
+  `confirmed` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`team`),
+  UNIQUE KEY `team_UNIQUE` (`team`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 CREATE TABLE `man_eloBuffer` (
@@ -472,7 +493,7 @@ CREATE TABLE `man_pn` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 CREATE TABLE `man_pokalsieger` (
-  `saison` tinyint(1) NOT NULL,
+  `saison` int(11) NOT NULL,
   `sieger` varchar(255) NOT NULL,
   `finalgegner` varchar(255) NOT NULL,
   PRIMARY KEY (`saison`),
@@ -577,7 +598,7 @@ CREATE TABLE `man_spieler` (
   `position` char(1) NOT NULL,
   `wiealt` smallint(6) unsigned NOT NULL DEFAULT '0',
   `frische` tinyint(1) NOT NULL DEFAULT '100',
-  `startelf` tinyint(1) unsigned NOT NULL DEFAULT '0',
+  `spiele_saison` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `spiele` tinyint(1) unsigned NOT NULL DEFAULT '0',
   `spiele_gesamt` smallint(5) unsigned NOT NULL DEFAULT '0',
   `spiele_verein` smallint(5) unsigned NOT NULL DEFAULT '0',
@@ -745,7 +766,7 @@ CREATE TABLE `man_supportRequests` (
   `timeAdded` int(10) unsigned NOT NULL DEFAULT '0',
   `lastAction` int(10) unsigned NOT NULL DEFAULT '0',
   `author` varchar(32) NOT NULL,
-  `category` enum('Frage','Fehlerbericht','Vorschlag') NOT NULL DEFAULT 'Frage',
+  `category` enum('Frage','Fehlerbericht','Vorschlag','Update') NOT NULL DEFAULT 'Frage',
   `title` varchar(150) NOT NULL,
   `description` text NOT NULL,
   PRIMARY KEY (`id`),

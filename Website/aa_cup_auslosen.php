@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 $landToSimulate1 = "SELECT land FROM ".$prefix."ligen ORDER BY lastCupSelection ASC LIMIT 0, 1";
 $landToSimulate2 = mysql_query($landToSimulate1);
 $landToSimulate3 = mysql_fetch_assoc($landToSimulate2);

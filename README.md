@@ -1,8 +1,8 @@
-# OpenSoccer
+# OpenSoccer2
 
 Online Soccer Manager
 
-**Live demo:** [www.opensoccer.org](http://www.opensoccer.org/)
+**Live demo:** [www.opensoccer2.org](http://www.opensoccer2.org/)
 
 ## Setup
 
@@ -27,6 +27,8 @@ Online Soccer Manager
 
  10. Make sure the directory `cache` is writable
 
+ 11. Make sure the directory `images/emblems` is writable
+
 ## Cron jobs
 
  * [Website/aa_buchungenBuffer.php](Website/aa_buchungenBuffer.php): every 10 minutes; except for hours 10-11, 14-15, 18-19 and 22-23
@@ -50,6 +52,8 @@ Online Soccer Manager
  * [Website/aa_tabellen_berechnen.php](Website/aa_tabellen_berechnen.php): every 2 minutes; at hours 16-17
  * [Website/aa_team_staerke_berechnen.php](Website/aa_team_staerke_berechnen.php): every 5 minutes
  * [Website/aa_tv_einnahmen.php](Website/aa_tv_einnahmen.php): every 6 hours
+ * [Website/aa_computer_moinitoring.php](Website/aa_computer_moinitoring): every day; at 23:53
+ * [Website/aa_fill_transfer.php](Website/aa_fill_transfer.php): every day; at 23:54
 
 ## Contributing
 
@@ -70,7 +74,7 @@ In order to provide translations for this project, please refer to our [document
 All parts of this project, except for the folder `Website/images`, have been released under the following license:
 
 ```
- Copyright (c) delight.im <info@delight.im>
+ Copyright (c) Markus Hiller <info@opensoccer2.org>
  
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

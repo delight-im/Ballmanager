@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 $a1 = "SELECT ids, vorname, nachname, staerke, talent, team, leiher, wiealt, position FROM ".$prefix."spieler WHERE spiele_gesamt > 8 ORDER BY RAND() LIMIT 0, 200";
 $a2 = mysql_query($a1);
 $counter = 0;

@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php
 if ($loggedin != 1) {
 	header('Location: /index.php');
@@ -37,7 +37,7 @@ if (isset($_POST['username']) && isset($_SESSION['bp_username'])) {
 }
 ?>
 <title><?php echo _('Benutzernamen wählen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Benutzernamen wählen'); ?></h1>
 <?php if (isset($schon_vergeben_message)) { echo $schon_vergeben_message; } ?>
 <p><?php echo _('Willkommen! Du stehst jetzt erst einmal auf der Warteliste. Sobald ein Team für Dich frei wird - und das wird nicht lange dauern - erhältst Du eine Nachricht von uns bei Bigpoint.'); ?></p>
@@ -54,4 +54,4 @@ else {
 <p><input type="submit" value="<?php echo _('Fertig'); ?>" /></p>
 </form>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

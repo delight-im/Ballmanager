@@ -1,4 +1,4 @@
-<?php if (!isset($_GET['mode'])) { include 'zzserver.php'; } ?>
+<?php if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); } ?>
 <?php
 set_time_limit(0);
 $sql1 = "SELECT gespielt FROM ".$prefix."ligen LIMIT 0, 1";
@@ -33,7 +33,7 @@ $aelter1 = "UPDATE ".$prefix."spieler SET wiealt = wiealt+365";
 $aelter2 = mysql_query($aelter1);
 $bwl1 = "UPDATE ".$prefix."zeitrechnung SET saison = saison+1";
 $bwl2 = mysql_query($bwl1);
-$bwl3 = "UPDATE ".$prefix."spieler SET spiele = 0, tore = 0, frische = 100, pokalNurFuer = '', verletzung = 0, karten = 0, letzte_verbesserung = 0, liga = (SELECT liga FROM ".$prefix."teams WHERE ids = ".$prefix."spieler.team)";
+$bwl3 = "UPDATE ".$prefix."spieler SET spiele = 0, spiele_saison = 0, tore = 0, frische = 100, pokalNurFuer = '', verletzung = 0, karten = 0, letzte_verbesserung = 0, liga = (SELECT liga FROM ".$prefix."teams WHERE ids = ".$prefix."spieler.team)";
 $bwl4 = mysql_query($bwl3);
 $lei1 = "UPDATE ".$prefix."spieler SET team = leiher, leiher = 'keiner', praemienAbrechnung = 0, praemieProEinsatz = 0, startelf_Liga = 0, startelf_Pokal = 0, startelf_Cup = 0, startelf_Test = 0 WHERE leiher != 'keiner'";
 $lei2 = mysql_query($lei1);

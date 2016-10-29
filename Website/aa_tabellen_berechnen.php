@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 $sql1 = "SELECT ids FROM ".$prefix."ligen";
 $sql2 = mysql_query($sql1);
 while ($sql3 = mysql_fetch_assoc($sql2)) {

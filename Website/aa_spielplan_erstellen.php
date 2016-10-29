@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 $sql1 = "SELECT gespielt FROM ".$prefix."ligen LIMIT 0, 1";
 $sql2 = mysql_query($sql1);
 $sql3 = mysql_fetch_assoc($sql2);

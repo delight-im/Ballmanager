@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 $sql1 = "SELECT ids, team, leiher, praemienAbrechnung, spiele, praemieProEinsatz FROM ".$prefix."spieler WHERE leiher != 'keiner' AND praemieProEinsatz > 0 AND spiele != praemienAbrechnung LIMIT 0, 50";
 $sql2 = mysql_query($sql1);
 while ($sql3 = mysql_fetch_assoc($sql2)) {

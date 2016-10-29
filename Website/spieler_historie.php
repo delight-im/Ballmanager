@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php
 if (!isset($_GET['id'])) { exit; }
 $sql1 = "SELECT ids, vorname, nachname, team, jugendTeam FROM ".$prefix."spieler WHERE ids = '".mysql_real_escape_string($_GET['id'])."'";
@@ -17,7 +17,7 @@ else {
 }
 ?>
 <title><?php echo _('Spieler-Historie:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Spieler-Historie:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
 <p style="text-align:right"><a href="/spieler.php?id=<?php echo $sql3['ids']; ?>" class="pagenava"><?php echo _('Zum Spieler-Profil'); ?></a></p>
 <table>
@@ -125,4 +125,4 @@ while ($a3 = mysql_fetch_assoc($a2)) {
 </tbody>
 </table>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

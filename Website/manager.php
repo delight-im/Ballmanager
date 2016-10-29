@@ -1,7 +1,7 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php
 if (!isset($_GET['id'])) { exit; }
-require_once('./classes/Friendlies.php');
+require_once(__DIR__.'/classes/Friendlies.php');
 $clearedID = mysql_real_escape_string($_GET['id']);
 $sql1 = "SELECT username, regdate, last_login, liga, team, status, infotext FROM ".$prefix."users WHERE ids = '".$clearedID."'";
 $sql2 = mysql_query($sql1);
@@ -73,7 +73,7 @@ window.onload = function() {
 	updateTextLength(document.getElementById('infotext'));
 }
 </script>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php
 $specialStatus = '';
 $specialStatusCSS = 'display:inline-block; padding:1px 4px; font-size:90%; margin:0 2px; background-color:#2556A5; color:#fff;';
@@ -142,7 +142,7 @@ if ($urlaub3 > 0 && !in_array($clearedID, unserialize(CONFIG_PROTECTED_USERS))) 
 <th scope="col"><?php echo _('Bereich'); ?></th>
 <th scope="col"><?php echo _('Wert'); ?></th>
 </tr>
-<?php include 'manager_kontaktlink.php'; ?>
+<?php include_once(__DIR__.'/manager_kontaktlink.php'); ?>
 </thead>
 <tbody>
 <?php
@@ -253,7 +253,7 @@ if ($loggedin == 1) {
             $chatSperreBis = $ban3['MAX(chatSperre)'];
             if ($chatSperreBis > 0 && $chatSperreBis > time()) {
                 addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team').'</a>'));
-                include 'zz3.php';
+                include_once(__DIR__.'/zz3.php');
                 exit;
             }
         }
@@ -321,4 +321,4 @@ if ($loggedin == 1) {
 }
 // INFOTEXT ENDE
 ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

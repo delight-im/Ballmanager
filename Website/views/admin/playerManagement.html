@@ -1,0 +1,42 @@
+<h1>Spielerverwaltung</h1>
+<div>
+    <h2>Gesamtsystem</h2>
+    <p>
+        <span>Spieler auf der Transferliste: </span>
+        <span data-bind="text: anzPlayerTransfer"></span><br/>
+        <span>Freie Spieler: </span>
+        <span data-bind="text: anzFreePlayer"></span>
+    </p>
+</div>
+<div>
+    <h2>Torwart</h2>
+    <p>
+        <span>Freie Spieler: </span>
+        <span data-bind="text: anzFreePlayerT"></span>
+    </p>
+    <button data-bind="click: function() { createPlayers('T'); }">100 T-Spieler erzeugen</button>
+</div>
+<div>
+    <h2>Abwehr</h2>
+    <p>
+        <span>Freie Spieler: </span>
+        <span data-bind="text: anzFreePlayerA"></span>
+    </p>
+    <button data-bind="click: function() { createPlayers('A'); }">100 A-Spieler erzeugen</button>
+</div>
+<div>
+    <h2>Mittelfeld</h2>
+    <p>
+        <span>Freie Spieler: </span>
+        <span data-bind="text: anzFreePlayerM"></span>
+    </p>
+    <button data-bind="click: function() { createPlayers('M'); }">100 M-Spieler erzeugen</button>
+</div>
+<div>
+    <h2>Sturm</h2>
+    <p>
+        <span>Freie Spieler: </span>
+        <span data-bind="text: anzFreePlayerS"></span>
+    </p>
+    <button data-bind="click: function() { createPlayers('S'); }">100 S-Spieler erzeugen</button>
+</div>

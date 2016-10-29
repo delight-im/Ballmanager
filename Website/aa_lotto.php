@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 $datum_heute = date('Y-m-d', time());
 $u3 = "SELECT team, zahlen FROM ".$prefix."lotto_tipps WHERE datum != '".$datum_heute."'";
 $u4 = mysql_query($u3);

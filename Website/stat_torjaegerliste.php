@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Torjäger'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <style type="text/css">
 <!--
@@ -7,14 +7,14 @@
 }
 -->
 </style>
-<?php include 'zz2.php'; ?>
-<?php include 'zzsubnav_statistik.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
+<?php include_once(__DIR__.'/zzsubnav_statistik.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
 if ($live_scoring_spieltyp_laeuft != '') {
 	echo '<h1>'._('Torjäger').'</h1>';
 	echo '<p>'.__('Zurzeit laufen %s-Spiele. Deshalb kannst Du leider die Torjäger-Liste nicht ansehen. Bitte warte, bis die Spiele beendet sind.', $live_scoring_spieltyp_laeuft).'</p>';
-	include 'zz3.php';
+	include_once(__DIR__.'/zz3.php');
 	exit;
 }
 ?>
@@ -75,4 +75,4 @@ while ($torj3 = mysql_fetch_assoc($torj2)) {
 <h1><?php echo _('Torjäger'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

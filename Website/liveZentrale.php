@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('LIVE-Zentrale'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php if ($live_scoring_spieltyp_laeuft == 'Liga' OR ($live_scoring_spieltyp_laeuft == 'Cup' && GameTime::getMatchDay() < 15)) { ?>
 <h1><?php echo _('Land wählen'); ?></h1>
@@ -153,4 +153,4 @@ else {
 <h1><?php echo _('LIVE-Zentrale'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

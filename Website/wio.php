@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Wer ist online?'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Wer ist online?'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <table><thead><tr class="odd"><th scope="col"><?php echo _('Manager'); ?></th><th scope="col"><?php echo _('Aktiv'); ?></th><th scope="col"><?php echo _('Chat'); ?></th><th scope="col"><?php echo _('Team'); ?></th><th scope="col"><?php echo _('Aktion'); ?></th></tr></thead><tbody>
@@ -55,4 +55,4 @@ while ($kontakt3 = mysql_fetch_assoc($kontakt2)) {
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!') ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

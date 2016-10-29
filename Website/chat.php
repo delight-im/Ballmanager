@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Chat'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
 <?php if ($loggedin == 1) { ?>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
@@ -28,7 +28,7 @@ function senden(nachricht) {
 }
 </script>
 <?php } ?>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php
 setTaskDone('open_chat');
@@ -40,7 +40,7 @@ if (mysql_num_rows($sql2) > 0) {
 	$chatSperreBis = $sql3['MAX(chatSperre)'];
 	if ($chatSperreBis > 0 && $chatSperreBis > time()) {
 		addInfoBox(__('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team').'</a>'));
-		include 'zz3.php';
+		include_once(__DIR__.'/zz3.php');
 		exit;
 	}
 }
@@ -122,4 +122,4 @@ echo '<p>
 <h1><?php echo _('Chat'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

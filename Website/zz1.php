@@ -1,4 +1,8 @@
 <?php
+ini_set('session.use_trans_sid', 0);
+
+include_once(__DIR__.'/zzserver.php');
+include_once(__DIR__.'/zzcookie.php');
 
 if (CONFIG_USE_HTTPS && CONFIG_USE_HTTPS_HSTS) {
     // use HTTP Strict Transport Security (HSTS) with a period of three months
@@ -9,9 +13,6 @@ if (CONFIG_USE_HTTPS && CONFIG_USE_HTTPS_HSTS) {
 header('Expires: Mon, 24 Mar 2008 00:00:00 GMT');
 header('Cache-Control: no-cache, no-store');
 
-ini_set('session.use_trans_sid', 0);
-include 'zzserver.php';
-include 'zzcookie.php';
 ob_start();
 
 // BLAETTERN ANFANG
@@ -21,7 +22,7 @@ $eintraege_pro_seite = 15; // ANGEBEN DER BEITRAEGE PRO SEITE
 $start = $seite*$eintraege_pro_seite-$eintraege_pro_seite; // ERMITTELN DER STARTZAHL FÜR DIE ABFRAGE
 // BLAETTERN ENDE
 
-require_once('./classes/I18N.php');
+require_once(__DIR__.'/classes/I18N.php');
 if (isset($_GET['setLocale'])) {
     I18N::changeLanguage($_GET['setLocale']);
 }
@@ -62,7 +63,14 @@ function setTaskDone($shortName) {
 <meta http-equiv="content-style-type" content="text/css" />
 <meta name="robots" content="index,follow" />
 <link rel="stylesheet" href="/images/Refresh.php?v=234936" type="text/css" />
+<link rel="stylesheet" href="/css/emblem.css" type="text/css" />
+<link rel="stylesheet" href="/css/app.css?v=01102016" type="text/css" />
 <script type="text/javascript" src="/js/drop_down.js"></script>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/knockout.min.js"></script>
+<script type="text/javascript" src="/js/ko.mapping.min.js"></script>
+<script type="text/javascript" src="/js/lodash.min.js"></script>
+<script type="text/javascript" src="/js/notify.min.js"></script>
 <link rel="stylesheet" href="/css/drop_down.css" type="text/css" />
 <link rel="icon" type="image/png" href="/images/favicon.png" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />

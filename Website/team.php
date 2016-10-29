@@ -1,4 +1,7 @@
-<?php include 'zz1.php'; ?>
+<?php 
+include_once(__DIR__.'/zz1.php'); 
+require_once(__DIR__.'/controller/emblemController.php');
+?>
 <?php
 if (!isset($_GET['id'])) { exit; }
 function kontoToWort($konto) {
@@ -10,7 +13,7 @@ function kontoToWort($konto) {
 	else { return _('hervorragend'); }
 }
 $clearid = mysql_real_escape_string(trim(strip_tags($_GET['id'])));
-$sql1 = "SELECT name, rank, konto, staerke, pokalrunde, vorjahr_pokalrunde, cuprunde, vorjahr_cuprunde, vorjahr_platz, aufstellung, liga, vorjahr_elo, elo, meisterschaften, pokalsiege, cupsiege, friendlies, friendlies_ges, last_managed FROM ".$prefix."teams WHERE ids = '".$clearid."'";
+$sql1 = "SELECT name, rank, konto, staerke, pokalrunde, vorjahr_pokalrunde, cuprunde, vorjahr_cuprunde, vorjahr_platz, liga, vorjahr_elo, elo, meisterschaften, pokalsiege, cupsiege, friendlies, friendlies_ges, last_managed FROM ".$prefix."teams WHERE ids = '".$clearid."'";
 $sql2 = mysql_query($sql1);
 $sql2a = mysql_num_rows($sql2);
 if ($sql2a == 0) { exit; }
@@ -24,8 +27,9 @@ $sql3 = mysql_fetch_assoc($sql2);
 }
 -->
 </style>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Team:').' '.$sql3['name']; ?></h1>
+<img class="emblem-big" src="/images/emblems/<?php echo EmblemController::getEmblemByTeamIds($clearid); ?>" />
 	<?php
 	if ($loggedin == 1 && ($_SESSION['status'] == 'Helfer' || $_SESSION['status'] == 'Admin')) {
 		echo '<p style="text-align:right">';
@@ -73,15 +77,14 @@ echo '<tr class="odd"><td>'._('Liga (Vorjahr)').'</td><td>'.$sql3['rank'].'. ('.
 echo '<tr><td>'._('Pokal (Vorjahr)').'</td><td>'.pokalrunde_wort($sql3['pokalrunde']).' ('.pokalrunde_wort($sql3['vorjahr_pokalrunde']).')</td></tr>';
 echo '<tr class="odd"><td>'._('Cup (Vorjahr)').'</td><td>'.cuprunde_wort($sql3['cuprunde']).' ('.cuprunde_wort($sql3['vorjahr_cuprunde']).')</td></tr>';
 echo '<tr><td>'._('Kaderstärke').'</td><td>'.number_format($sql3['staerke'], 1, ',', '.').'</td></tr>';
-echo '<tr class="odd"><td>'._('Aufstellungsstärke').'</td><td>'.number_format($sql3['aufstellung'], 1, ',', '.').'</td></tr>';
-echo '<tr><td>'._('Meisterschaft').'</td><td>'.$sql3['meisterschaften'].'x</td></tr>';
-echo '<tr class="odd"><td>'._('Pokalsieg').'</td><td>'.$sql3['pokalsiege'].'x</td></tr>';
-echo '<tr><td>'._('Cupsieg').'</td><td>'.$sql3['cupsiege'].'x</td></tr>';
-echo '<tr class="odd"><td>'._('RKP (Vorjahr)').'</td><td>'.__('%1$s (%2$s) Punkte', number_format($sql3['elo'], 0, ',', '.'), number_format($sql3['vorjahr_elo'], 0, ',', '.')).'</td></tr>';
-echo '<tr><td>'._('Testspiele').'</td><td>';
+echo '<tr class="odd"><td>'._('Meisterschaft').'</td><td>'.$sql3['meisterschaften'].'x</td></tr>';
+echo '<tr><td>'._('Pokalsieg').'</td><td>'.$sql3['pokalsiege'].'x</td></tr>';
+echo '<tr class="odd"><td>'._('Cupsieg').'</td><td>'.$sql3['cupsiege'].'x</td></tr>';
+echo '<tr><td>'._('RKP (Vorjahr)').'</td><td>'.__('%1$s (%2$s) Punkte', number_format($sql3['elo'], 0, ',', '.'), number_format($sql3['vorjahr_elo'], 0, ',', '.')).'</td></tr>';
+echo '<tr class="odd"><td>'._('Testspiele').'</td><td>';
 if ($live_scoring_spieltyp_laeuft == 'Test') { echo '?'; } else { echo __('%1$s (%2$s Siege)', $sql3['friendlies_ges'], $sql3['friendlies']); }
 echo '</td></tr>';
-echo '<tr class="odd"><td>'._('Stadion').'</td><td>'.__('%s Plätze', number_format($stadion3['plaetze'], 0, ',', '.')).'</td></tr>';
+echo '<tr><td>'._('Stadion').'</td><td>'.__('%s Plätze', number_format($stadion3['plaetze'], 0, ',', '.')).'</td></tr>';
 ?>
 </tbody>
 </table>
@@ -95,7 +98,7 @@ else {
 	$mdsSiege4 = 0;
 }
 // TROPHAEEN-RAUM ANFANG
-if ($sql3['meisterschaften'] > 0 OR $sql3['pokalsiege'] > 0 OR $sql3['cupsiege'] > 0) {
+if ($sql3['meisterschaften'] > 0 OR $sql3['pokalsiege'] > 0 OR $sql3['cupsiege'] > 0 OR $sql3['cupsiege'] > 0 OR $mdsSiege4 > 0) {
 	echo '<h1>'._('Trophäen-Raum').'</h1><p>';
 	if ($sql3['meisterschaften'] > 0) {
 		for ($i = 0; $i < $sql3['meisterschaften']; $i++) {
@@ -135,7 +138,7 @@ if ($sql3['meisterschaften'] > 0 OR $sql3['pokalsiege'] > 0 OR $sql3['cupsiege']
 </thead>
 <tbody>
 <?php
-$sql4 = "SELECT ids, position, vorname, nachname, wiealt, staerke, talent, frische, verletzung, transfermarkt, marktwert FROM ".$prefix."spieler WHERE team = '".$clearid."' ORDER BY position DESC";
+$sql4 = "SELECT ids, position, vorname, nachname, wiealt, staerke, talent, frische, verletzung, transfermarkt, marktwert FROM ".$prefix."spieler WHERE team = '".$clearid."' ORDER BY position = 'S', position = 'M', position = 'A', position = 'T'";
 $sql5 = mysql_query($sql4);
 $counter = 0;
 $durchschnittsAlterWerte = array();
@@ -186,4 +189,4 @@ echo '<tr class="odd"><td colspan="6">'.__('Team-Marktwert: %s €', number_form
 <p><strong><?php echo _('Überschriften:').'</strong> '._('MT: Mannschaftsteil, TS: Transferstatus, AL: Alter, FR: Frische'); ?></p>
 <p><strong><?php echo _('Mannschaftsteile:').'</strong> '._('T: Torwart, A: Abwehr, M: Mittelfeld, S: Sturm'); ?></p>
 <p><strong><?php echo _('Durchgestrichen:').'</strong> '._('verletzte oder gesperrte Spieler'); ?></p>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

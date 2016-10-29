@@ -572,7 +572,7 @@ class PHPMailer
         if (version_compare(PHP_VERSION, '5.1.2', '>=')) {
             $autoload = spl_autoload_functions();
             if ($autoload === false or !in_array('PHPMailerAutoload', $autoload)) {
-                require 'PHPMailerAutoload.php';
+                require_once(__DIR__.'/PHPMailerAutoload.php');
             }
         }
     }
@@ -1394,7 +1394,7 @@ class PHPMailer
         );
         if (empty($lang_path)) {
             //Calculate an absolute path so it can work if CWD is not here
-            $lang_path = dirname(__FILE__). DIRECTORY_SEPARATOR . 'language'. DIRECTORY_SEPARATOR;
+            $lang_path = __DIR__. DIRECTORY_SEPARATOR . 'language'. DIRECTORY_SEPARATOR;
         }
         $foundlang = true;
         $lang_file = $lang_path . 'phpmailer.lang-' . $langcode . '.php';
@@ -2922,7 +2922,7 @@ class PHPMailer
     public function html2text($html, $advanced = false)
     {
         if ($advanced) {
-            require_once 'extras/class.html2text.php';
+            require_once(__DIR__.'extras/class.html2text.php');
             $htmlconverter = new html2text($html);
             return $htmlconverter->get_text();
         }

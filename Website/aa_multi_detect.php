@@ -1,5 +1,5 @@
 <?php
-if (!isset($_GET['mode'])) { include 'zzserver.php'; }
+if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); }
 $was_wird_getan = mt_rand(1, 2);
 if ($was_wird_getan == 1) {
 	$sql1 = "DELETE FROM ".$prefix."users_multis WHERE user1 NOT IN (SELECT ids FROM ".$prefix."users)";

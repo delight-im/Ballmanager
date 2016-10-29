@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Transfermarkt | Kaufen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Markt durchsuchen'); ?></h1>
 <?php
 define('MIN_GEBOT', 0); // in 10 Mio
@@ -244,4 +244,4 @@ if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wieal
 if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt_start='.$value_for_wiealt_start.'&amp;wiealt_end='.$value_for_wiealt_end.'&amp;position='.$value_for_position.'&amp;staerke_start='.$value_for_staerke_start.'&amp;staerke_end='.$value_for_staerke_end.'&amp;maxGebot_start='.$value_for_maxGebot_start.'&amp;maxGebot_end='.$value_for_maxGebot_end.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

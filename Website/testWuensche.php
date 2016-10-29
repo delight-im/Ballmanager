@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Testwünsche'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Testwünsche'); ?></h1>
 <?php if ($loggedin == 1) { ?>
 <p><?php echo _('Du suchst noch Gegner für Testspiele? Ein paar Termine sind einfach noch frei geblieben? Dann bist Du hier genau richtig!'); ?></p>
@@ -23,7 +23,7 @@ if (isset($_POST['nachricht']) && $cookie_id != CONFIG_DEMO_USER) {
 		$chatSperreBis = $sql3['MAX(chatSperre)'];
 		if ($chatSperreBis > 0 && $chatSperreBis > time()) {
 			addInfoBox('Du bist noch bis zum %1$s Uhr für die Kommunikation im Spiel gesperrt. Wenn Dir unklar ist warum, frage bitte das %2$s.', date('d.m.Y H:i', $chatSperreBis), '<a class="inText" href="/wio.php">'._('Support-Team').'</a>');
-			include 'zz3.php';
+			include_once(__DIR__.'/zz3.php');
 			exit;
 		}
 	}
@@ -59,4 +59,4 @@ while ($sql3 = mysql_fetch_assoc($sql2)) {
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

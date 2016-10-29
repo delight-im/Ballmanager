@@ -11,7 +11,7 @@ header_remove('X-Powered-By');
 
 date_default_timezone_set('Europe/Berlin');
 ignore_user_abort(true);
-include 'config.php';
+include_once(__DIR__.'/config.php');
 
 // connect to the database
 mysql_connect(CONFIG_DATABASE_HOST, CONFIG_DATABASE_USERNAME, CONFIG_DATABASE_PASSWORD) or die ('Falsche MySQL-Daten!');
@@ -22,7 +22,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'stdout');
 function reportError($text, $statement = '') {
     global $prefix;
-	$err1 = "INSERT INTO ".$prefix."php_fehler (datei, zeile, beschreibung, zeit) VALUES ('".$_SERVER['REQUEST_URI']."_".mt_rand(0, 1000000)."', '0', '".mysql_real_escape_string(trim($text).'/'.$statement)."', ".time().")";
+    $req_uri = 'no uri';
+    if(isset($_SERVER['REQUEST_URI'])) {
+        $req_uri = $_SERVER['REQUEST_URI'];
+    }
+	$err1 = "INSERT INTO ".$prefix."php_fehler (datei, zeile, beschreibung, zeit) VALUES ('".$req_uri."_".mt_rand(0, 1000000)."', '0', '".mysql_real_escape_string(trim($text).'/'.$statement)."', ".time().")";
 	mysql_query($err1);
 	return FALSE;
 }

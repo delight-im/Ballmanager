@@ -1,4 +1,4 @@
-<?php if (!isset($_GET['mode'])) { include 'zzserver.php'; } ?>
+<?php if (!isset($_GET['mode'])) { include_once(__DIR__.'/zzserver.php'); } ?>
 <?php
 $frei1 = "SELECT ids, vorname, nachname, team, wiealt FROM ".$prefix."spieler WHERE vertrag < ".time()." AND team != 'frei'";
 $frei2 = mysql_query($frei1);

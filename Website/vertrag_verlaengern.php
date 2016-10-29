@@ -1,4 +1,4 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <?php
 
 define('SALARY_AMOUNT_FACTOR', 1.395);
@@ -114,7 +114,7 @@ if ($sql3['leiher'] != 'keiner') { exit; }
 $pLevels = getPercentageLevels(round($sql3['wiealt']/365));
 ?>
 <title><?php echo _('Vertrag verlängern:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Vertrag verlängern:'); ?> <?php echo $sql3['vorname'].' '.$sql3['nachname']; ?></h1>
 <?php if ($loggedin == 1) { ?>
 <form action="/vertrag_verlaengern.php" method="post" accept-charset="utf-8" class="imtext">
@@ -160,4 +160,4 @@ $contractOptionsHTML .= getContractOption(66, $pLevels[2], $sql3, $contractOptio
 <?php } else { ?>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

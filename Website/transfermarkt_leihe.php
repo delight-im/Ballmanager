@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Transfermarkt | Ausleihen'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <h1><?php echo _('Markt durchsuchen'); ?></h1>
 <?php
 // NUR 2 TRANSFERS ZWISCHEN 2 TEAMS ANFANG
@@ -63,7 +63,7 @@ if ($loggedin == 1 && $_SESSION['pMaxGebot'] == 0) {
 	echo '<p>'._('Bist Du wirklich sicher, dass Du schon eine Verstärkung für Dein Team brauchst?').'</p>';
 	echo '<p>'._('Der Vorstand empfiehlt Dir, als neuer Trainer in den ersten zwei Stunden auf Transfers zu verzichten.').'</p>';
 	echo '<p>'.__('Du solltest Dir zuerst einmal %1$s ansehen und versuchen, eine erste %2$s daraus zu formen.', '<a href="/kader.php">'._('Deinen Kader').'</a>', '<a href="/aufstellung.php">'._('Mannschaft').'</a>').'</p>';
-	include 'zz3.php';
+	include_once(__DIR__.'/zz3.php');
 	exit;
 }
 // AM ANFANG NOCH KEINE TRANSFERS ENDE
@@ -244,4 +244,4 @@ if ($seite < $wieviel_seiten) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wieal
 if ($wieviel_seiten > 0) { echo '<a href="'.$_SERVER['SCRIPT_NAME'].'?wiealt='.$value_for_wiealt.'&amp;position='.$value_for_position.'&amp;staerke='.$value_for_staerke.'&amp;seite='.ceil($wieviel_seiten).'">'._('Letzte').'</a>'; } else { echo '<span clss="this-page">'._('Letzte').'</span>'; }
 echo '</div>';
 ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,6 +1,6 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Multi-Accounts'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
 <?php
 if ($loggedin == 1) {
 if ($_SESSION['status'] != 'Helfer' && $_SESSION['status'] != 'Admin') { exit; }
@@ -48,7 +48,7 @@ if (isset($_GET['user1']) && isset($_GET['user2'])) {
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 1) {
 		addInfoBox(__('Der User %s konnte nicht gefunden werden.', htmlspecialchars($user1Name)));
-		include 'zz3.php';
+		include_once(__DIR__.'/zz3.php');
 		exit;
 	}
 	else {
@@ -59,7 +59,7 @@ if (isset($_GET['user1']) && isset($_GET['user2'])) {
 	$sql2 = mysql_query($sql1);
 	if (mysql_num_rows($sql2) != 1) {
 		addInfoBox(__('Der User %s konnte nicht gefunden werden.', htmlspecialchars($user2Name)));
-		include 'zz3.php';
+		include_once(__DIR__.'/zz3.php');
 		exit;
 	}
 	else {
@@ -252,4 +252,4 @@ else {
 <h1><?php echo _('Multi-Accounts'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

@@ -1,7 +1,7 @@
-<?php include 'zz1.php'; ?>
+<?php include_once(__DIR__.'/zz1.php'); ?>
 <title><?php echo _('Zuschauerverlauf'); ?> - <?php echo CONFIG_SITE_NAME; ?></title>
-<?php include 'zz2.php'; ?>
-<?php include 'zzsubnav_statistik.php'; ?>
+<?php include_once(__DIR__.'/zz2.php'); ?>
+<?php include_once(__DIR__.'/zzsubnav_statistik.php'); ?>
 <?php if ($loggedin == 1) { ?>
 <?php if ($cookie_team != '__'.$cookie_id) { ?>
 <h1><?php echo _('Zuschauerverlauf'); ?></h1>
@@ -43,4 +43,4 @@ else {
 <h1><?php echo _('Zuschauerverlauf'); ?></h1>
 <p><?php echo _('Du musst angemeldet sein, um diese Seite aufrufen zu können!'); ?></p>
 <?php } ?>
-<?php include 'zz3.php'; ?>
+<?php include_once(__DIR__.'/zz3.php'); ?>

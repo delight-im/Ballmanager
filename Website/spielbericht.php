@@ -330,12 +330,32 @@ if ($sql3['typ'] == 'Liga') {
 <?php
 $abstand_spiel_heute = time()-$sql3['datum'];
 if ($abstand_spiel_heute > -3600) { // wenn das Spiel ueberhaupt schon war dann Kommentare zeigen
+    echo '<p>
+    <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Facebook" src="/images/brands/facebook-32.png" width="32" />
+    </a>
+    <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Twitter" src="/images/brands/twitter-32.png" width="32" />
+    </a>
+    <a target="_blank" title="Google Plus" href="https://plus.google.com/share?url=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Google Plus" src="/images/brands/google-plus-32.png" width="32" />
+    </a></p>';
     echo '<h1>'._('Kommentar des Reporters');
     if ($live_scoring_meldung != '') { echo ' ('.$live_scoring_min_gespielt.'. Minute)'; }
     echo '</h1>';
     echo $kommentar_liste;
 }
 elseif ($live_scoring_spieltyp_laeuft == '') {
+	echo '<p>
+    <a target="_blank" title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Facebook" src="/images/brands/facebook-32.png" width="32" />
+    </a>
+    <a target="_blank" title="Twitter" href="https://twitter.com/share?url=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Twitter" src="/images/brands/twitter-32.png" width="32" />
+    </a>
+    <a target="_blank" title="Google Plus" href="https://plus.google.com/share?url=http%3A%2F%2'.CONFIG_SITE_DOMAIN.'/spielbericht.php?id='.trim($_GET['id']).')">
+        <img alt="Google Plus" src="/images/brands/google-plus-32.png" width="32" />
+    </a></p>';
 	echo '<h1>'._('Mögliche RKP-Veränderungen').'</h1>';
 	$ergebnisStrings = array('0:0', '1:0', '2:0', '3:0', '0:3', '0:2', '0:1');
 	echo '<table><thead><tr class="odd"><th scope="col">'._('Ergebnis').'</th><th scope="col">'.$sql3['team1'].' ('.round($eloTeam1).')</th><th scope="col">'.$sql3['team2'].' ('.round($eloTeam2).')</th></tr></thead><tbody>';

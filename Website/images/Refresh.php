@@ -561,7 +561,6 @@ tfoot th em {
 	text-align: center;
 	color: #fff;
 	background-color: #000;
-	border-bottom: 1px solid #666;
 	padding: 8px 2px;
 	font-size: 13px;
 	font-weight: bold;
@@ -833,7 +832,7 @@ div#sidebar-expander span {
         display: block;
     }
     div#sidebar-expander {
-        display: block;
+        display: flex;
     }
 }
 

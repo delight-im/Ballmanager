@@ -446,7 +446,8 @@ function kommentar($ersetzung, $typ) {
     );
 	if (isset($formulierungen[$typ])) { $formulierung = $formulierungen[$typ]; } else { return $typ; }
 	shuffle($formulierung);
-	$ausgabe = str_replace('XYZ', $ersetzung, $formulierung[0]);
+	$ersetzung = str_replace(' ','&',$ersetzung);
+	$ausgabe = str_replace('XYZ', '@'.$ersetzung, $formulierung[0]);
 	return $ausgabe;
 }
 function weakenTeam($team1Name, $defensivName, $cardType) {
